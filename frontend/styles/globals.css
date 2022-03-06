@@ -27,10 +27,14 @@ img {
 }
 
 .fade{
+  position: relative;
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
+  transform: translateY(50px);
+  transition:  all 500ms ease-out;
 }
 
 .show{
   opacity: 1;
+  transform: translateY(0);
+
 }
