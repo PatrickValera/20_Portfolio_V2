@@ -1,0 +1,61 @@
+{
+    "name":"Patrick Valera",
+    "summary":"I am a computer science student and a self-taught web developer. I aim to deepen my understanding of various technologies and build exceptional products.",
+    "skills":["JavaScript","React","NodeJS","MonogoDB","Redux"],
+    "projects":[{
+        "id":1,
+        "title":"Candelebra",
+        "description":"A Minimal real-time mock stock trading platform/Visualizer",
+        "stack":["React","NodeJS","Material UI","Socket IO","Redux"],
+        "link":"/"
+    },{
+        "id":2,
+        "title":"Groovemade",
+        "description":"A fullstack online E-commerce store.",
+        "stack":["React","CSS","NodeJS","Material UI","Redux"],
+
+        "link":"/"
+    },{
+        "id":3,
+        "title":"Artifox",
+        "description":"Fullstack Online Store",
+        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
+        "link":"/"
+    },{
+        "id":4,
+        "title":"Project 4",
+        "description":"Fullstack Online Store",
+        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
+        "link":"/"
+    },{
+        "id":5,
+        "title":"Project 5",
+        "description":"Fullstack Online Store",
+        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
+        "link":"/"
+    },{
+        "id":6,
+        "title":"Project 6",
+        "description":"Fullstack Online Store",
+        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
+        "link":"/"
+    },{
+        "id":7,
+        "title":"Project 4",
+        "description":"Fullstack Online Store",
+        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
+        "link":"/"
+    },{
+        "id":8,
+        "title":"Project 5",
+        "description":"Fullstack Online Store",
+        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
+        "link":"/"
+    },{
+        "id":9,
+        "title":"Project 6",
+        "description":"Fullstack Online Store",
+        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
+        "link":"/"
+    }]
+}
