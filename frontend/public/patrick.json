@@ -41,19 +41,19 @@
         "link":"/"
     },{
         "id":7,
-        "title":"Project 4",
+        "title":"Project 7",
         "description":"Fullstack Online Store",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"/"
     },{
         "id":8,
-        "title":"Project 5",
+        "title":"Project 8",
         "description":"Fullstack Online Store",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"/"
     },{
         "id":9,
-        "title":"Project 6",
+        "title":"Project 9",
         "description":"Fullstack Online Store",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"/"
