@@ -31,8 +31,8 @@ const Projects = ({ projects }) => {
 
       <Box display='flex' sx={{ flexWrap: 'wrap', gap: 2, mb: 4, minHeight: '10px' }}>
         {projects.slice(3.7).map((project, index) => (
-          <Fade sx={{ flex: '30% 1 1', minWidth: '150px' }}>
-            <Box key={index} sx={{ p: 0, bgcolor: 'primary.main' }}>
+          <Fade  key={index} sx={{ flex: '30% 1 1', minWidth: '150px' }}>
+            <Box sx={{ p: 0, bgcolor: 'primary.main' }}>
               <Typography variant='body1'>{project.title}</Typography>
               {/* <Typography variant='body1'>{project.description}</Typography> */}
               <Typography variant='body1'>Project Summary {index + 4}</Typography>
