@@ -18,8 +18,8 @@ function MyApp({ Component, pageProps }) {
         if(entry.isIntersecting)observer.unobserve(entry.target)
       })
     },{
-      threshold:1,
-      // rootMargin:' 0% 0% -20% 0%',
+      threshold:0,
+      rootMargin:'-120px',
     })
 
     items.forEach(item => {

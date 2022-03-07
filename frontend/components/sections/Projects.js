@@ -9,16 +9,16 @@ const Projects = ({ projects }) => {
 
       </Fade>
       {projects.slice(0, 3).map((project, index) => (
-        <Box key={index} display='grid' className='fade' sx={{ gridTemplateColumns: 'repeat(12,1fr)', position: 'relative', bgcolor: 'red', mb: 4 }}>
+        <Box key={index} display='grid' className='fade' sx={{ gridTemplateColumns: 'repeat(12,1fr)', position: 'relative', mb: 4 }}>
 
           {/* IMAGE HERE */}
-          <Box sx={{ gridArea: '1/1/-1/7', bgcolor: 'pink' }}>
-            <Box sx={{ bgcolor: 'pink' }}>
+          <Box sx={{ gridArea: '1/1/-1/7', bgcolor: 'secondary.dark' }}>
+            <Box sx={{  }}>
             </Box>
           </Box>
 
           {/* TEXT HERE */}
-          <Box sx={{ gridArea: '1/6/-1/-1', bgcolor: 'green' }}>
+          <Box sx={{ gridArea: '1/6/-1/-1', bgcolor: 'primary.dark' }}>
             <Typography variant='body1'>{project.title}</Typography>
             {/* <Typography variant='body1'>{project.description}</Typography> */}
             <Typography variant='body1'>Project Summary {index + 1}</Typography>
@@ -32,7 +32,7 @@ const Projects = ({ projects }) => {
       <Box display='flex' sx={{ flexWrap: 'wrap', gap: 2, mb: 4, minHeight: '10px' }}>
         {projects.slice(3.7).map((project, index) => (
           <Fade  key={index} sx={{ flex: '30% 1 1', minWidth: '150px' }}>
-            <Box sx={{ p: 0, bgcolor: 'primary.main' }}>
+            <Box sx={{ p: 0, bgcolor: 'primary.dark' }}>
               <Typography variant='body1'>{project.title}</Typography>
               {/* <Typography variant='body1'>{project.description}</Typography> */}
               <Typography variant='body1'>Project Summary {index + 4}</Typography>

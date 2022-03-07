@@ -4,7 +4,7 @@ import React from 'react'
 const Header = ({ setTheme }) => {
     return (
         <Box component='header' sx={{  position: 'sticky',top:'0',zIndex:10   }}>
-            <Box sx={{ px:2,position: 'absolute',bgcolor: 'secondary.main',display: 'flex', alignItems: 'center', width: '100%', }}>
+            <Box sx={{ px:2,position: 'absolute',bgcolor: 'background.paper',display: 'flex', alignItems: 'center', width: '100%', }}>
                 <Typography variant='h6' sx={{ flexGrow: '1' }}>PV</Typography>
                 <nav>
 
