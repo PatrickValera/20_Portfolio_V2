@@ -3,7 +3,7 @@ import React from 'react'
 import { Box } from '@mui/material'
 const Introduction = () => {
   return (
-    <Box display='flex' sx={{ p: '0 10%', height: '100vh', flexDirection: 'column', justifyContent: 'center', maxWidth:'800px' }}>
+    <Box display='flex' sx={{pl:4, height: '100vh', flexDirection: 'column', justifyContent: 'center', maxWidth:'800px' }}>
       <Box className='fade'sx={{ maxWidth: '450px' }}>
         <Typography variant='body1'> Hello, my name is</Typography>
         <Typography variant='h2'> Patrick Valera.</Typography>
