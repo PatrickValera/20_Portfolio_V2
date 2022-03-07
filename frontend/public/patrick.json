@@ -2,7 +2,7 @@
     "name":"Patrick Valera",
     "summary":"I am a computer science student and a self-taught web developer. I aim to deepen my understanding of various technologies and build exceptional products.",
     "skills":["JavaScript","React","NodeJS","MonogoDB","Redux"],
-    "socials":[{"site":"github"},{"site":"linkedin"},{"site":"codesandbox"}],
+    "socials":[{"site":"github"},{"site":"linkedin"},{"site":"codesandbox"},{"site":"instagram"}],
     "projects":[{
         "id":1,
         "title":"Candelebra",

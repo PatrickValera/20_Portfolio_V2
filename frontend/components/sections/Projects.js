@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import Fade from '../Fade'
+import Icon from '../Icon'
 const Projects = ({ projects }) => {
   return (
     <>
@@ -13,7 +14,7 @@ const Projects = ({ projects }) => {
 
           {/* IMAGE HERE */}
           <Box sx={{ gridArea: '1/1/-1/7', bgcolor: 'secondary.dark' }}>
-            <Box sx={{  }}>
+            <Box sx={{}}>
             </Box>
           </Box>
 
@@ -22,6 +23,7 @@ const Projects = ({ projects }) => {
             <Typography variant='body1'>{project.title}</Typography>
             {/* <Typography variant='body1'>{project.description}</Typography> */}
             <Typography variant='body1'>Project Summary {index + 1}</Typography>
+            <Icon site={'github'} />
           </Box>
         </Box>
       ))}
@@ -31,11 +33,13 @@ const Projects = ({ projects }) => {
 
       <Box display='flex' sx={{ flexWrap: 'wrap', gap: 2, mb: 4, minHeight: '10px' }}>
         {projects.slice(3.7).map((project, index) => (
-          <Fade  key={index} sx={{ flex: '30% 1 1', minWidth: '150px' }}>
+          <Fade key={index} sx={{ flex: '30% 1 1', minWidth: '150px' }}>
             <Box sx={{ p: 0, bgcolor: 'primary.dark' }}>
               <Typography variant='body1'>{project.title}</Typography>
               {/* <Typography variant='body1'>{project.description}</Typography> */}
               <Typography variant='body1'>Project Summary {index + 4}</Typography>
+              <Icon site={'github'} />
+
             </Box>
           </Fade>
         ))}
