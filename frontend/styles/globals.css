@@ -1,13 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-}
 
+}
 * {
   box-sizing: border-box;
 }
@@ -18,7 +21,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 img {
@@ -26,25 +29,48 @@ img {
   display: block;
 }
 
-.fade{
+/* ========== MY GLOBAL STYLES ========== */
+
+.fade {
   position: relative;
   opacity: 0;
   transform: translateY(20px);
-  transition:  all 500ms ease-out;
+  transition: all 500ms ease-out;
 }
 
-.show{
+.show {
   opacity: 1;
   transform: translateY(0);
-
 }
-.icon{
+.icon {
   position: relative;
   transform: translateX(0);
-  transition: all 100ms ease-in-out !important;
+  transition: all 100ms ease-in-out;
 }
-
-.icon:hover{
-  color:rgb(207, 91, 13);
+.icon:hover {
+  color: rgb(207, 91, 13);
   transform: translateY(-5px);
 }
+.nav-link {
+  position: relative;
+  transition: all 300ms ease-in-out;
+}
+.nav-link::after{
+  transition: all 200ms ease-out;
+  transition-delay: 100ms;
+  top:0;
+  left: 0;
+  position: absolute;
+  content: '';
+  background-color: white;
+  width: 100%;
+  height: 2px;
+}
+.nav-link:hover {
+  color:rgb(218, 80, 0);
+}
+.nav-link:hover::after{
+  background-color: rgba(207, 91, 13, 0.829);
+  top: 95%;
+}
+
