@@ -30,7 +30,7 @@ export default function Home({ setTheme }) {
       {/* ========== SOCIALS ========== */}
       <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'column', position: 'fixed', bottom: '0', left: '40px', alignItems: 'center' }}>
         {socials.map((social, index) => (
-          <Icon key={index} site={social.site} sx={{mb:1}} />
+          <Icon key={index} site={social.site} sx={{mb:1,color:'text.primary'}} />
         ))}
         <Box sx={{ border: '1px solid', borderColor: 'text.primary', minHeight: '100px' }}></Box>
       </Box>

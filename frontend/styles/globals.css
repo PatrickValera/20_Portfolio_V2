@@ -38,3 +38,13 @@ img {
   transform: translateY(0);
 
 }
+.icon{
+  position: relative;
+  transform: translateX(0);
+  transition: all 100ms ease-in-out !important;
+}
+
+.icon:hover{
+  color:rgb(207, 91, 13);
+  transform: translateY(-5px);
+}

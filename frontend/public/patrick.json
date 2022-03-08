@@ -6,56 +6,56 @@
     "projects":[{
         "id":1,
         "title":"Candelebra",
-        "description":"A Minimal real-time mock stock trading platform/Visualizer",
+        "description":"A real-time mock stock trading platform/Visualizer. Updates to the stock prices happens in every few seconds.",
         "stack":["React","NodeJS","Material UI","Socket IO","Redux"],
         "link":"/"
     },{
         "id":2,
         "title":"Groovemade",
-        "description":"A fullstack online E-commerce store.",
+        "description":"A fullstack online E-commerce store, complete with user creation/management, order placement and admin control. Features a sleek and modern design.",
         "stack":["React","CSS","NodeJS","Material UI","Redux"],
 
         "link":"/"
     },{
         "id":3,
         "title":"Artifox",
-        "description":"Fullstack Online Store",
+        "description":"Fullstack Online Store. Custom styling done via SASS.",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"/"
     },{
         "id":4,
         "title":"Project 4",
-        "description":"Fullstack Online Store",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"/"
     },{
         "id":5,
         "title":"Project 5",
-        "description":"Fullstack Online Store",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"/"
     },{
         "id":6,
         "title":"Project 6",
-        "description":"Fullstack Online Store",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"/"
     },{
         "id":7,
         "title":"Project 7",
-        "description":"Fullstack Online Store",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"/"
     },{
         "id":8,
         "title":"Project 8",
-        "description":"Fullstack Online Store",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"/"
     },{
         "id":9,
         "title":"Project 9",
-        "description":"Fullstack Online Store",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"/"
     }]

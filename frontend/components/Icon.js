@@ -6,7 +6,7 @@ import { BsFillChatTextFill } from 'react-icons/bs';
 
 const Icon = ({ site,sx }) => {
     let icon = useRef(null)
-    let props = { size: '1.5rem', className: 'fade show' }
+    let props = { size: '1.5rem', className: '' }
     switch (site) {
         case 'github': {
             icon.current = <RiGithubFill {...props} />
@@ -31,7 +31,7 @@ const Icon = ({ site,sx }) => {
 
     }
     return (
-        <Box sx={{ ...sx,cursor: 'pointer'}}>
+        <Box sx={{ ...sx,cursor: 'pointer'}} className='icon'>
             {icon.current}
         </Box>
     )
