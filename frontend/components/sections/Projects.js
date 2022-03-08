@@ -4,7 +4,7 @@ import Fade from '../Fade'
 import Icon from '../Icon'
 const Projects = ({ projects }) => {
   return (
-    <>
+    <Box  id='projects'>
       <Fade>
         <Typography variant='h6'>Project Highlights</Typography>
 
@@ -44,7 +44,7 @@ const Projects = ({ projects }) => {
         ))}
       </Box>
 
-    </>
+    </Box>
   )
 }
 

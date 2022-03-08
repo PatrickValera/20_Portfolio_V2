@@ -1,8 +1,9 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 const Awards = () => {
   return (
-    <div>Awards</div>
+    <Box id='awards'>Awards</Box>
   )
 }
 
