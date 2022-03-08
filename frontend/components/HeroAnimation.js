@@ -8,19 +8,19 @@ import { FaReact,FaNodeJs,FaSass } from "react-icons/fa";
 
 let props = { className: 'hero-icon' }
 let logos = [
-    <IoLogoCss3 {...props} />,
-    <GrHtml5 {...props} />,
-    <DiJavascript1 {...props} />,
-    <SiMongodb {...props} />,
-    <SiExpress {...props} />,
-    <FaReact {...props} />,
-    <FaNodeJs {...props} />,
-    <SiVisualstudiocode {...props} />,
-    <SiNextdotjs {...props} />,
+    <IoLogoCss3 key='1'{...props} />,
+    <GrHtml5 key='2'{...props} />,
+    <DiJavascript1 key='3'{...props} />,
+    <SiMongodb key='4'{...props} />,
+    <SiExpress key='5'{...props} />,
+    <FaReact key='6'{...props} />,
+    <FaNodeJs key='7'{...props} />,
+    <SiVisualstudiocode key='8'{...props} />,
+    <SiNextdotjs key='9'{...props} />,
 
-    <SiRedux {...props} />,
-    <FaSass {...props} />,
-    <SiMaterialui {...props} />,
+    <SiRedux key='10'{...props} />,
+    <FaSass key='11'{...props} />,
+    <SiMaterialui key='12'{...props} />,
     
 
 ]
