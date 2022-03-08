@@ -78,7 +78,8 @@ const HeroAnimation = () => {
             }}>ADD</Button> */}
             <Box className='hero-animation' sx={{ position: 'relative', flex: '25% 1 1',maxWidth:'300px', height: {xs:'150px',md:'500px'}, overflowY: 'hidden' }}>
                 <Box className='tiles-container' ref={container} sx={{ transition: 'all 5000ms linear', position: 'relative', transform: 'translateY(00px)' }}>
-                    {num.map(num => (<Box key={num} className='tile' sx={{ display: 'flex', flexWrap: 'wrap' }}>
+                    {num.map((anum,index) => (
+                    <Box key={index} className='tile' sx={{ display: 'flex', flexWrap: 'wrap' }}>
                         {logos.map((component, index) => (
                             <Box key={index} sx={{ p: 2, display: 'flex', flex: '80px 1 1', m: 1 }}>
                                 {component}
