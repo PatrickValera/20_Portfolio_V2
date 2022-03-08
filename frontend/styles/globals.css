@@ -9,7 +9,6 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-
 }
 * {
   box-sizing: border-box;
@@ -55,22 +54,30 @@ img {
   position: relative;
   transition: all 300ms ease-in-out;
 }
-.nav-link::after{
+.nav-link::after {
   transition: all 200ms ease-out;
   transition-delay: 100ms;
-  top:0;
+  top: 0;
   left: 0;
   position: absolute;
-  content: '';
+  content: "";
   background-color: white;
   width: 100%;
   height: 2px;
 }
 .nav-link:hover {
-  color:rgb(218, 80, 0);
+  color: rgb(218, 80, 0);
 }
-.nav-link:hover::after{
+.nav-link:hover::after {
   background-color: rgba(207, 91, 13, 0.829);
   top: 95%;
 }
-
+.hero-icon {
+  width: 100%;
+  height: auto;
+  /* border: 2px solid black; */
+}
+/* .hero-animation::-webkit-scrollbar { width: 0 !important } */
+.move{
+  transform:translateY(-500px);
+}
