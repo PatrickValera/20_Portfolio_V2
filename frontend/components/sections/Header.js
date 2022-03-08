@@ -24,7 +24,7 @@ const Header = ({ isLight,setTheme }) => {
         </Typography>
         <Box component='nav' display='flex' sx={{ gap: 2,flexDirection:{xs:'column',md:'row'},position:{xs:'absolute',md:'relative'},top:'0',right:{xs:'-200px',md:'unset'} }}>
           {['ABOUT','PROJECTS','AWARDS','SKILLS'].map((section,index)=>(
-            <Link className='nav-link' href={`#${section.toLowerCase()}`} underline='none' sx={{color:'text.primary',fontWeight:'600'}}>
+            <Link key={index} className='nav-link' href={`#${section.toLowerCase()}`} underline='none' sx={{color:'text.primary',fontWeight:'600'}}>
               {section}
               </Link>
           ))}
