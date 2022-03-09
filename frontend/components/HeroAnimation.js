@@ -39,6 +39,8 @@ const HeroAnimation = () => {
     const startFirst = () => {
         container.current.classList.remove('start')
         container.current.classList.remove('init')
+        container.current.style.transition=' all 0ms linear';
+            container.current.style.transform=' translateY(100%) ';
         setTimeout(() => {
             // container.current.classList.add('start-animate')
             container.current.style.transition=' all 12000ms linear';
@@ -60,6 +62,8 @@ const HeroAnimation = () => {
 
     const startSecond = () => {
         container2.current.classList.remove('start2')
+        container2.current.style.transition=' all 0ms linear';
+        container2.current.style.transform=' translateY(100%) ';
         setTimeout(() => {
             // container2.current.classList.add('start-animate')
             container2.current.style.transition=' all 12000ms linear';
@@ -107,7 +111,7 @@ const HeroAnimation = () => {
                 
                         <Box className='tile' sx={{ display: 'flex', flexWrap: 'wrap' }}>
                             {logos.map((component, index) => (
-                                <Box key={index} sx={{ px: {xs:1,md:3},pb:{xs:1,md:3}, display: 'flex', flex: '80px 1 1'}}>
+                                <Box key={index} sx={{ px: {xs:1,md:4},pb:{xs:2,md:7}, display: 'flex', flex: '80px 1 1'}}>
                                     {component}
                                 </Box>
                             ))}
@@ -117,7 +121,7 @@ const HeroAnimation = () => {
       
                         <Box className='tile' sx={{ display: 'flex', flexWrap: 'wrap' }}>
                             {logos.map((component, index) => (
-                                <Box key={index} sx={{ px: {xs:1,md:3},pb:{xs:2,md:4}, display: 'flex', flex: '80px 1 1',}}>
+                                <Box key={index} sx={{ px: {xs:1,md:4},pb:{xs:2,md:7}, display: 'flex', flex: '80px 1 1',}}>
                                     {component}
                                 </Box>
                             ))}
