@@ -28,127 +28,100 @@ let logos = [
 ]
 
 const HeroAnimation = () => {
-    // useEffect(() => {
-    //     const container = document.querySelector('.hero-animation')
-
-    //     const LastTileObserver = new IntersectionObserver(entries => {
-    //         const lastCard = entries[0]
-    //         if (!lastCard.isIntersecting) return
-    //         else {
-    //             console.log("LOAD NEW TILE")
-    //             let newTile = document.querySelector('.tile:last-child')
-    //             // console.log(newTile)
-    //             console.log(container)
-    //             container.append(newTile)
-    //             LastTileObserver.unobserve(lastCard.target)
-    //             LastTileObserver.observe(document.querySelector('.tile:last-child'))
-    //         }
-    //     }, {
-    //         root: container,
-    //         rootMargin: '0px'
-    //     }
-    //     )
-    //     LastTileObserver.observe(document.querySelector('.tile:last-child'))
-
-
-    //     // let container = document.querySelector('.hero-animation')
-    //     // console.log(container)
-    //     // container.scroll({
-    //     //     top: 1000,
-    //     //     behavior: 'smooth'
-    //     // });
-    // }, [])
     let container = useRef()
     let container2 = useRef()
     let timer = 12000
-    const [num, setNum] = useState([1])
+    let timer1=useRef()
+    let timer2=useRef()
+    let timer3=useRef()
+    let timer4=useRef()
 
-    const start = () => {
+    const startFirst = () => {
         container.current.classList.remove('start')
         container.current.classList.remove('init')
         setTimeout(() => {
-            container.current.classList.add('start-animate')
+            // container.current.classList.add('start-animate')
+            container.current.style.transition=' all 12000ms linear';
+            container.current.style.transform=' translateY(-110%) ';
+
         }, 5)
-        // container.current.classList.add('start-animate')
-        setInterval(() => {
-            container.current.classList.toggle('start-animate')
+
+        timer1.current=setInterval(() => {
+            // container.current.classList.toggle('start-animate')
+            container.current.style.transition=' all 0ms linear';
+            container.current.style.transform=' translateY(100%) ';
         }, (timer))
-        setInterval(() => {
-            container.current.classList.toggle('start-animate')
+        timer2.current=setInterval(() => {
+            // container.current.classList.toggle('start-animate')
+            container.current.style.transition=' all 12000ms linear';
+            container.current.style.transform=' translateY(-110%) ';
         }, (timer + 5))
     }
-    const reset = () =>{
-        setTimeout(()=>{
 
-        container2.current.classList.remove('start-animate')
-    },1)
-
-        setTimeout(()=>{
-            container2.current.classList.add('start-animate')
-
-        },10)
-
+    const startSecond = () => {
+        container2.current.classList.remove('start2')
+        setTimeout(() => {
+            // container2.current.classList.add('start-animate')
+            container2.current.style.transition=' all 12000ms linear';
+            container2.current.style.transform=' translateY(-110%) ';
+        }, 5)
+        timer3.current=setInterval(() => {
+            // container2.current.classList.toggle('start-animate')
+            container2.current.style.transition=' all 0ms linear';
+            container2.current.style.transform=' translateY(100%) ';
+        }, (timer))
+        timer4.current=setInterval(() => {
+            // container2.current.classList.toggle('start-animate')
+            container2.current.style.transition=' all 12000ms linear';
+            container2.current.style.transform=' translateY(-110%) ';
+        }, (timer + 5))
     }
     useEffect(() => {
-        // container.current.classList.add('start-animate2-init')
-
         container.current.classList.add('start')
-        // container2.current.classList.remove('init')
-        container2.current.classList.add('start-animate')
+        container2.current.classList.add('start2')
 
         setTimeout(() => {
-            start()
+            startFirst()
         }, timer / 2)
-        setInterval(() => {
-            reset()
-            // container2.current.classList.toggle('start-animate')
-        }, (timer))
-        // setInterval(() => {
-        //     container2.current.classList.toggle('start-animate')
-        // }, (timer + 10))
+        setTimeout(()=>{
+            startSecond()
+        },timer)
+        return(()=>{
+            container.current.classList.add('init')
+            clearInterval(timer1.current)
+            clearInterval(timer2.current)
+            clearInterval(timer3.current)
+            clearInterval(timer4.current)
+        })
+
     })
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         console.log(num)
-    //         setNum(state => [...state, (state[state.length - 1] + 1)])
-    //         let newPos = (num.length - 1) * 300
-    //         console.log(newPos)
-    //         container.current.style.transform = `translateY(-${String(newPos)}px)`
-    //     }, timer)
-    // },[num])
+
     return (
         <>
-            {/* <Button onClick={() => {
-                console.log(num)
-                setNum(state => [...state, (state[state.length - 1] + 1)])
-                let newPos = (num.length - 1) * 500
-                console.log(newPos)
-                container.current.style.transform = `translateY(-${String(newPos)}px)`
-            }}>ADD</Button> */}
             <Box className='hero-animation' sx={{
                 position: 'relative', flex: '25% 1 1', maxWidth: '300px', height: { xs: '150px', md: '300px' },
-                 overflowY: 'hidden'
+                overflowY: 'hidden'
                 // border: '1px solid blue'
             }}>
                 <Box className='tiles-container init ' ref={container} sx={{ transition: 'all 0ms linear', position: 'absolute', transform: 'translateY(100%)' }}>
-                    {num.map((anum, index) => (
-                        <Box key={index} className='tile' sx={{ display: 'flex', flexWrap: 'wrap' }}>
+                
+                        <Box className='tile' sx={{ display: 'flex', flexWrap: 'wrap' }}>
                             {logos.map((component, index) => (
-                                <Box key={index} sx={{ p: 2, display: 'flex', flex: '80px 1 1', m: 1 }}>
+                                <Box key={index} sx={{ px: {xs:1,md:3},pb:{xs:1,md:3}, display: 'flex', flex: '80px 1 1'}}>
                                     {component}
                                 </Box>
                             ))}
-                        </Box>))}
+                        </Box>
                 </Box>
                 <Box className='tiles-container ' ref={container2} sx={{ transition: 'all 0ms linear', position: 'absolute', transform: 'translateY(100%)' }}>
-                    {num.map((anum, index) => (
-                        <Box key={index} className='tile' sx={{ display: 'flex', flexWrap: 'wrap' }}>
+      
+                        <Box className='tile' sx={{ display: 'flex', flexWrap: 'wrap' }}>
                             {logos.map((component, index) => (
-                                <Box key={index} sx={{ p: 2, display: 'flex', flex: '80px 1 1', m: 1 }}>
+                                <Box key={index} sx={{ px: {xs:1,md:3},pb:{xs:2,md:4}, display: 'flex', flex: '80px 1 1',}}>
                                     {component}
                                 </Box>
                             ))}
-                        </Box>))}
+                        </Box>
                 </Box>
             </Box>
         </>
