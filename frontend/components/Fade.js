@@ -1,9 +1,9 @@
 import { Box } from '@mui/material'
 import React from 'react'
 
-const Fade = ({children,sx,key}) => {
+const Fade = ({children,sx}) => {
   return (
-    <Box sx={sx} key={key} className='fade'>{children}</Box>
+    <Box sx={sx}  className='fade'>{children}</Box>
   )
 }
 

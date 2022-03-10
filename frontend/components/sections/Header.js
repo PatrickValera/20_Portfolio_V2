@@ -2,11 +2,43 @@ import { Box, Button, Link, Switch, Typography } from '@mui/material'
 import React, { useEffect } from 'react'
 
 const Header = ({ isLight,setTheme }) => {
+  const handleScroll=(header)=>{
+    console.log('hello')
+    let scrollTop=document.documentElement.scrollTop
+    if(0<scrollTop){
+      header.style.top='-100%'
+    }
+    else{
+      header.style.top='0'
+    }
+  }
   useEffect(()=>{
+    const header=document.querySelector('.header')
+    let lastScroll=window.scrollY
+    let handleScroll=()=>{
+      if(window.scrollY>lastScroll){
+        header.style.opacity='0'
 
+        console.log('down')
+
+      }
+      else{
+        console.log('up')
+        header.style.opacity='1'
+
+      }
+      lastScroll=window.scrollY
+    }
+    
+    window.addEventListener('scroll',handleScroll)
+
+    return (()=>{
+      window.removeEventListener('scroll'.handleScroll)
+    })
+   
   },[])
   return (
-    <Box component='header' sx={{ position: 'sticky', top: '0', zIndex: 10 }}>
+    <Box component='header' className='header' sx={{ transition:'all 200ms ease-in-out',position: 'sticky',top:0,transform:'translateY(0px)',  zIndex: 10 }}>
       <Box
         sx={{
           px: 2,
