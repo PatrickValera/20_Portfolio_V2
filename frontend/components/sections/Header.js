@@ -18,14 +18,9 @@ const Header = ({ isLight,setTheme }) => {
     let handleScroll=()=>{
       if(window.scrollY>lastScroll){
         header.style.opacity='0'
-
-        console.log('down')
-
       }
       else{
-        console.log('up')
         header.style.opacity='1'
-
       }
       lastScroll=window.scrollY
     }

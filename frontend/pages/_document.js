@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
                     <title>
                         Patrick Valera: Portfolio
                     </title>
-                    <meta name='description' title="Web development portfolio for Patrick Valera 2022.">
+                    <meta name='description' content="Web development portfolio for Patrick Valera 2022.">
                         
                     </meta>
                     <link
