@@ -1,9 +1,9 @@
-import { Box, Typography, Paper, Stack, Divider } from '@mui/material'
+import { Box, Typography, Paper, Stack } from '@mui/material'
 import React from 'react'
 import Fade from '../Fade'
 import Icon from '../Icon'
 import { styled } from '@mui/material/styles';
-
+import { IKImage, IKContext } from 'imagekitio-react';
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#eeeee',
   // ...theme.typography.body2,
@@ -19,20 +19,26 @@ const Projects = ({ projects }) => {
       <Fade>
         <Box display='flex' sx={{ mt: '10vh', mb: 2, alignItems: 'center' }}>
           <Typography variant='h5' sx={{}}>Project Highlights</Typography>
-          <Divider sx={{ bgcolor: 'text.primary', ml: 4, width: '20%', borderWidth: ' 1px' }} />
         </Box>
       </Fade>
 
       {/* HIGHLIGHT PROJECTS START HERE */}
       {projects.slice(0, 3).map((project, index) => (
-        <Fade key={index} sx={{ display: 'grid', gridTemplateColumns: 'repeat(12,1fr)', position: 'relative', mb: 6 }}>
+        <Fade key={index} sx={{ display: 'grid', gridTemplateColumns: 'repeat(12,1fr)', position: 'relative', mb: '10vh' }}>
           {/* HIGHLIGHT PROJECT IMAGE HERE */}
           <Box sx={{ gridArea: { xs: '1/1/-1/13', md: '1/1/-1/8' }, bgcolor: 'text.disabled' }}>
-            <Box sx={{ minHeight: '350px' }}>
+            <Box sx={{ }}>
+              <IKContext urlEndpoint="https://ik.imagekit.io/oqrgl5cil3a">
+                <IKImage
+                  path={`/${project.title.toLowerCase()}.png`}
+                  className='proj-image'
+                  transformation={[{ quality: 50 }]}
+                />
+              </IKContext>
             </Box>
           </Box>
           {/* HIGHLIGHT PROJECT DESCRIPTION HERE */}
-          <Box sx={{ p: 2, gridArea: { xs: '1/1/-1/13', md: '1/6/-1/-1' }, display: 'flex', flexDirection: 'column', textAlign: 'right', justifyContent: 'center' }}>
+          <Box sx={{ p: 2, zIndex:'5',gridArea: { xs: '1/1/-1/13', md: '1/6/-1/-1' }, display: 'flex', flexDirection: 'column', textAlign: 'right', justifyContent: 'center' }}>
             <Typography variant='h6'>{project.title}</Typography>
             <Typography variant='body1' sx={{ bgcolor: 'text.primary', color: 'background.paper', p: 3, mb: 1 }}>{project.description}</Typography>
             <Stack direction='row' spacing={{ xs: 1, md: 2 }} sx={{ flexWrap: 'wrap', color: 'blue', justifyContent: 'right', mb: 1 }}>

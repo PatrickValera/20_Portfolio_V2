@@ -17,7 +17,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const About = () => {
     return (
         <Box id='about' sx={{ display: 'flex', mb: '20vh' }}>
-            <Box sx={{ flex: '500px 1 1', p: 2 }}>
+            <Box sx={{ flex: '500px 1 1', px: 2 }}>
                 <Fade>
                     <Typography variant='h5' sx={{ mb: 4 }}>
                         About Me
@@ -42,11 +42,11 @@ const About = () => {
                 </Fade>
             </Box>
             <Box sx={{ display: { xs: 'none', md: 'block' }, flex: '300px 1 1' }}>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', border: '3px solid', borderColor: 'text.primary', height: '400px', p: 4 }}>
+                <Fade sx={{ display: 'flex', flexWrap: 'wrap', border: '3px solid', borderColor: 'text.primary', height: '400px', p: 4 }}>
                     <Icon label='Photos' sx={{ mx: 2, flex: '70px 1 1', alignItems: 'center', display: 'flex', flexDirection: 'column' }}><IoIosFolder size='2.5rem' /></Icon>
                     <Icon label='Documents' sx={{ mx: 2, flex: '70px 1 1', alignItems: 'center', display: 'flex', flexDirection: 'column' }}><IoIosFolder size='2.5rem' /></Icon>
                     <Icon label='Others' sx={{ mx: 2, flex: '70px 1 1', alignItems: 'center', display: 'flex', flexDirection: 'column' }}><IoIosFolder size='2.5rem' /></Icon>
-                </Box>
+                </Fade>
             </Box>
         </Box>
     )
