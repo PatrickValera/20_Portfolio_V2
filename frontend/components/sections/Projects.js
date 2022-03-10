@@ -19,23 +19,23 @@ const Projects = ({ projects }) => {
         <Typography variant='h5' sx={{ mt: '10vh', mb: 2 }}>Project Highlights</Typography>
       </Fade>
       {projects.slice(0, 3).map((project, index) => (
-          <Fade key={index} sx={{ display:'grid',gridTemplateColumns: 'repeat(12,1fr)', position: 'relative', mb: 2 }}>
+          <Fade key={index} sx={{ display:'grid',gridTemplateColumns: 'repeat(12,1fr)', position: 'relative', mb: 6 }}>
 
             {/* PROJECT IMAGE HERE */}
-            <Box sx={{ gridArea: '1/1/-1/7', bgcolor: 'text.disabled' }}>
+            <Box sx={{ gridArea: {xs:'1/1/-1/13',md:'1/1/-1/8'}, bgcolor: 'text.disabled' }}>
               <Box sx={{ minHeight: '350px' }}>
               </Box>
             </Box>
 
             {/* PROJECT DESCRIPTION HERE */}
-            <Box sx={{ p: 2, gridArea: '1/6/-1/-1', display: 'flex', flexDirection: 'column', textAlign: 'right', justifyContent: 'center' }}>
+            <Box sx={{ p: 2, gridArea: {xs:'1/1/-1/13',md:'1/6/-1/-1'}, display: 'flex', flexDirection: 'column', textAlign: 'right', justifyContent: 'center' }}>
               <Typography variant='h6'>{project.title}</Typography>
               <Typography variant='body1' sx={{ bgcolor: 'text.primary', color: 'background.paper', p: 3, mb: 1 }}>{project.description}</Typography>
-              <Stack direction='row' spacing={2} sx={{ color: 'blue', justifyContent: 'right', mb: 1 }}>
+              <Stack direction='row' spacing={{xs:1,md:2}} sx={{ flexWrap:'wrap',color: 'blue', justifyContent: 'right', mb: 1 }}>
                 {project.stack.map((tool, index) => {
                   return (
                     <Box key={index} sx={{ color: 'red' }}>
-                      <Item elevation={0}>{tool}</Item>
+                      <Item elevation={0} xs={{inlineSize:'max-content'}}>{tool}</Item>
                     </Box>
                   )
                 })}

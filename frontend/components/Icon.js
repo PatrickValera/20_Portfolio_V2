@@ -1,10 +1,11 @@
 import React, { useRef } from 'react'
 import { RiGithubFill, RiLinkedinBoxFill, RiInstagramLine } from "react-icons/ri";
 import { AiFillCodeSandboxCircle } from "react-icons/ai";
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { BsFillChatTextFill } from 'react-icons/bs';
 
-const Icon = ({ site,sx }) => {
+
+const Icon = ({ site,sx,children,label }) => {
     let icon = useRef(null)
     let props = { size: '1.5rem', className: '' }
     switch (site) {
@@ -31,8 +32,18 @@ const Icon = ({ site,sx }) => {
 
     }
     return (
-        <Box sx={{ ...sx,cursor: 'pointer'}} className='icon'>
-            {icon.current}
+        <Box 
+        sx={[{ ...sx,cursor: 'pointer',transform:'translateY(0)',transition:'all 200ms ease-in-out'},
+        (theme) => ({
+            '&:hover': {
+              color: theme.palette.primary.main,
+              transform: 'translateY(-5px)',
+            },
+          })
+        ]} 
+        >
+            {children?children:icon.current}
+            <Typography fontSize='.85rem' sx={{textOverflow:'ellipsis'}}>{label&&label}</Typography>
         </Box>
     )
 }

@@ -2,7 +2,8 @@ import React from 'react'
 import Fade from '../Fade'
 import { Box, Typography,Stack, Paper } from '@mui/material'
 import {styled} from '@mui/material/styles';
-
+import {IoIosFolder} from 'react-icons/io'
+import Icon from '../Icon';
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#eeeee',
     ...theme.typography.body2,
@@ -41,8 +42,10 @@ const About = () => {
                 </Fade>
             </Box>
             <Box sx={{ flex: '300px 1 1' }}>
-                <Box sx={{border:'3px solid',borderColor:'text.primary', height:'400px'}}>
-
+                <Box sx={{display:'flex',flexWrap:'wrap',border:'3px solid',borderColor:'text.primary', height:'400px',p:4}}>
+                <Icon label='Photos' sx={{mx:2,flex:'70px 1 1',alignItems:'center',display:'flex',flexDirection:'column'}}><IoIosFolder size='2.5rem'/></Icon>
+                <Icon label='Documents' sx={{mx:2,flex:'70px 1 1',alignItems:'center',display:'flex',flexDirection:'column'}}><IoIosFolder size='2.5rem'/></Icon>
+                <Icon label='Others' sx={{mx:2,flex:'70px 1 1',alignItems:'center',display:'flex',flexDirection:'column'}}><IoIosFolder size='2.5rem'/></Icon>
                 </Box>
             </Box>
 
