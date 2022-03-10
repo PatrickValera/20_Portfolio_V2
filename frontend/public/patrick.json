@@ -19,8 +19,8 @@
     },{
         "id":3,
         "title":"Artifox",
-        "description":"Fullstack Online Store. Custom styling done via SASS.",
-        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
+        "description":"A Fullstack Online Store. Buile theartifox.com from scratch, styling done via SASS",
+        "stack":["Javascript","React","NodeJS","Material UI","SASS","Redux"],
         "link":"/"
     },{
         "id":4,
