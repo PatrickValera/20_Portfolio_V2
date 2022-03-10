@@ -24,13 +24,13 @@ const About = () => {
                 </Fade>
                 <Fade>
                     <Typography variant='body2' sx={{mb:3}}>
-                        Hi there. My name is Patrick and I'm a passionate web developer. I had a early introduction to web development back in 2012 but I never really started seriously learning about web development until 2020.
+                        {`Hi there. My name is Patrick and I'm a passionate web developer. I had a early introduction to web development back in 2012 but I never really started seriously learning about web development until 2020.`}
                     </Typography>
                     <Typography variant='body2' sx={{mb:3}}>
-                        For the most part, I taught myself how to create web apps thru youtube tutorials, and Udemy courses. I've garned numerous certificates and built 10+ projects in the last year. I also recenlty won my first hackathon which was orginized by MongoDB.
+                       {` For the most part, I taught myself how to create web apps thru youtube tutorials, and Udemy courses. I've garned numerous certificates and built 10+ projects in the last year. I also recenlty won my first hackathon which was orginized by MongoDB.`}
                     </Typography>
                     <Typography variant='body2' sx={{mb:1}}>
-                        Herer are some technologies I'm currently learning:
+                        {`Herer are some technologies I'm currently learning:`}
                     </Typography>
                     <Stack direction='row' spacing={2} sx={{pl:2}}>
                         <Item>TypeScript</Item>
