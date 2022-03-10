@@ -41,7 +41,7 @@ const About = () => {
                         </Stack>
                 </Fade>
             </Box>
-            <Box sx={{ flex: '300px 1 1' }}>
+            <Box sx={{ display:{xs:'none',md:'block'},flex:'300px 1 1' }}>
                 <Box sx={{display:'flex',flexWrap:'wrap',border:'3px solid',borderColor:'text.primary', height:'400px',p:4}}>
                 <Icon label='Photos' sx={{mx:2,flex:'70px 1 1',alignItems:'center',display:'flex',flexDirection:'column'}}><IoIosFolder size='2.5rem'/></Icon>
                 <Icon label='Documents' sx={{mx:2,flex:'70px 1 1',alignItems:'center',display:'flex',flexDirection:'column'}}><IoIosFolder size='2.5rem'/></Icon>

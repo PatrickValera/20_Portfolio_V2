@@ -5,39 +5,39 @@
     "socials":[{"site":"github"},{"site":"linkedin"},{"site":"codesandbox"},{"site":"instagram"}],
     "projects":[{
         "id":1,
-        "title":"Candelebra",
-        "description":"A real-time mock stock trading platform/Visualizer. Updates to the stock prices happens in every few seconds.",
-        "stack":["React","NodeJS","Material UI","Socket IO","Redux"],
-        "link":"/"
-    },{
-        "id":2,
         "title":"Groovemade",
-        "description":"A fullstack online E-commerce store, complete with user creation/management, order placement and admin control. Features a sleek and modern design.",
+        "description":"A fullstack online E-commerce store, complete with user creation, management, order placement and admin control. Features a sleek and modern design.",
         "stack":["React","CSS","NodeJS","Material UI","Redux"],
 
         "link":"/"
     },{
+        "id":2,
+        "title":"Candelebra",
+        "description":"A real-time, mock stock, trading platform. Utilizes Rechart for graphing stock prices. Allows user to view real time stock prices and place trade orders.",
+        "stack":["React","NodeJS","Material UI","Socket IO","Redux"],
+        "link":"/"
+    },{
         "id":3,
         "title":"Artifox",
-        "description":"A Fullstack Online Store. Buile theartifox.com from scratch, styling done via SASS",
+        "description":"A Fullstack Online Store. Based from theartifox.com and built from scratch. Styling done via SASS and CSS modules",
         "stack":["Javascript","React","NodeJS","Material UI","SASS","Redux"],
         "link":"/"
     },{
         "id":4,
-        "title":"Project 4",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
+        "title":"ChatterCord",
+        "description":"A realtime messaging web app utilizing Socket IO. Keeps track and stores messages from users into a database.",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"/"
     },{
         "id":5,
-        "title":"Project 5",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
+        "title":"Recipe Finder",
+        "description":"Connects to a third party API to search for food recipes based on the user's input",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"/"
     },{
         "id":6,
-        "title":"Project 6",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
+        "title":"Spacetagram",
+        "description":"An image gallery that fetches Nasa's image of the day all the way from the 1980's",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"/"
     },{

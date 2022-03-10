@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import { Box, Container } from '@mui/material'
 import Introduction from '../components/sections/Introduction'
