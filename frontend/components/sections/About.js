@@ -17,7 +17,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const About = () => {
     return (
         <Box id='about' sx={{ display: 'flex', mb: '20vh' }}>
-            <Box sx={{ flex: '500px 1 1', px: 2 }}>
+            <Box sx={{ flex: '400px 1 1', px: 2 }}>
                 <Fade>
                     <Typography variant='h5' sx={{ mb: 4 }}>
                         About Me
@@ -33,7 +33,7 @@ const About = () => {
                     <Typography variant='body2' sx={{ mb: 1 }}>
                         {`Herer are some technologies I'm currently learning:`}
                     </Typography>
-                    <Stack direction='row' spacing={2} sx={{ pl: 2 }}>
+                    <Stack direction='row' sx={{ pl: 2,flexWrap:'wrap',gap:1,justifyContent:'left' }}>
                         <Item>TypeScript</Item>
                         <Item>Redis</Item>
                         <Item>GraphQL</Item>
