@@ -19,16 +19,15 @@ const Projects = ({ projects }) => {
         <Typography variant='h5' sx={{ mt: '10vh', mb: 2 }}>Project Highlights</Typography>
       </Fade>
       {projects.slice(0, 3).map((project, index) => (
-        <Fade>
-          <Box key={index} display='grid' sx={{ gridTemplateColumns: 'repeat(12,1fr)', position: 'relative', mb: 2 }}>
+          <Fade key={index} sx={{ display:'grid',gridTemplateColumns: 'repeat(12,1fr)', position: 'relative', mb: 2 }}>
 
-            {/* IMAGE HERE */}
+            {/* PROJECT IMAGE HERE */}
             <Box sx={{ gridArea: '1/1/-1/7', bgcolor: 'text.disabled' }}>
               <Box sx={{ minHeight: '350px' }}>
               </Box>
             </Box>
 
-            {/* TEXT HERE */}
+            {/* PROJECT DESCRIPTION HERE */}
             <Box sx={{ p: 2, gridArea: '1/6/-1/-1', display: 'flex', flexDirection: 'column', textAlign: 'right', justifyContent: 'center' }}>
               <Typography variant='h6'>{project.title}</Typography>
               <Typography variant='body1' sx={{ bgcolor: 'text.primary', color: 'background.paper', p: 3, mb: 1 }}>{project.description}</Typography>
@@ -42,12 +41,9 @@ const Projects = ({ projects }) => {
                 })}
               </Stack>
               <Icon site={'github'} />
-
             </Box>
 
-          </Box>
-        </Fade>
-
+          </Fade>
       ))}
 
 
