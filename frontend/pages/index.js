@@ -3,16 +3,14 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import { Box, Container } from '@mui/material'
-import Header from '../components/sections/Header'
 import Introduction from '../components/sections/Introduction'
 import Projects from '../components/sections/Projects'
 import Footer from '../components/sections/Footer'
 import Profile from '../public/patrick.json'
-import { useEffect } from 'react'
 import Icon from '../components/Icon'
-import Awards from '../components/sections/Awards'
 import { BsFillChatTextFill } from 'react-icons/bs'
 import About from '../components/sections/About'
+import Contact from '../components/sections/Contact'
 
 
 export default function Home({ setTheme }) {
@@ -20,11 +18,11 @@ export default function Home({ setTheme }) {
   return (
     <Box sx={{}}>
       {/* =========== MAIN =========== */}
-      <Container  component='main' maxWidth='lg' sx={{ px: { xs: 1, md: '100px' } }}>
+      <Container  component='main' maxWidth='lg' sx={{ px: { xs: 1, md: '30px' } }}>
         <Introduction />
         <About/>
         <Projects projects={projects} />
-        <Awards/>
+        <Contact/>
         <Footer />
       </Container>
       {/* ========== END MAIN ========= */}
