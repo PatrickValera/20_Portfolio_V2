@@ -12,6 +12,7 @@ import { useEffect } from 'react'
 import Icon from '../components/Icon'
 import Awards from '../components/sections/Awards'
 import { BsFillChatTextFill } from 'react-icons/bs'
+import About from '../components/sections/About'
 
 
 export default function Home({ setTheme }) {
@@ -21,6 +22,7 @@ export default function Home({ setTheme }) {
       {/* =========== MAIN =========== */}
       <Container  component='main' maxWidth='lg' sx={{ px: { xs: 1, md: '100px' } }}>
         <Introduction />
+        <About/>
         <Projects projects={projects} />
         <Awards/>
         <Footer />
