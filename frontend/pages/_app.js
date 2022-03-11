@@ -30,7 +30,6 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={isLightTheme?lightTheme:darkTheme}>
       <CssBaseline />
       <Header setTheme={setLightTheme} />
-
       <Component {...pageProps} />
     </ThemeProvider>
   )

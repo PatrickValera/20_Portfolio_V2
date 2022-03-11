@@ -15,7 +15,6 @@ body {
 }
 
 a {
-  color: #0070f3;
   text-decoration: none;
 }
 
@@ -72,6 +71,11 @@ img {
   background-color: rgba(255, 240, 157, 0.911);
   top: 95%;
 }
+.nav-open{
+  right:0;
+  opacity: 1; 
+}
+
 .hero-icon {
   width: 100%;
   height: auto;

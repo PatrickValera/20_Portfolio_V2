@@ -15,9 +15,9 @@ import Contact from '../components/sections/Contact'
 export default function Home({ setTheme }) {
   const { projects, socials } = Profile
   return (
-    <Box sx={{}}>
+    <>
       {/* =========== MAIN =========== */}
-      <Container  component='main' maxWidth='lg' sx={{ px: { xs: 1, md: '30px' } }}>
+      <Container  component='main' maxWidth='lg' sx={{} }>
         <Introduction />
         <About/>
         <Projects projects={projects} />
@@ -27,19 +27,19 @@ export default function Home({ setTheme }) {
       {/* ========== END MAIN ========= */}
 
       {/* ========== SOCIALS ========== */}
-      <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'column', position: 'fixed', bottom: '0', left: '15px', alignItems: 'center' }}>
+      {/* <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'column', position: 'fixed', bottom: '0', left: '15px', alignItems: 'center' }}>
         {socials.map((social, index) => (
-          <Icon key={index} site={social.site} sx={{mb:1,color:'text.primary'}} />
+          <Icon key={index} site={social.site} sx={{mb:1,color:'text.primary'}} link={social.link} />
         ))}
         <Box sx={{ border: '1px solid', borderColor: 'text.primary', minHeight: '100px' }}></Box>
-      </Box>
+      </Box> */}
       {/* <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'column', position: 'fixed', bottom: '0', right: '40px', alignItems: 'center' }}>
         <Icon site='mail' />
         <Box sx={{ border: '1px solid', borderColor: 'text.primary', minHeight: '120px',mt:1 }}></Box>
       </Box> */}
       {/* ========= END SOCIALS ======== */}
 
-    </Box>
+    </>
 
   )
 }

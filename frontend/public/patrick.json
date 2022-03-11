@@ -2,44 +2,54 @@
     "name":"Patrick Valera",
     "summary":"I am a computer science student and a self-taught web developer. I aim to deepen my understanding of various technologies and build exceptional products.",
     "skills":["JavaScript","React","NodeJS","MonogoDB","Redux"],
-    "socials":[{"site":"github"},{"site":"linkedin"},{"site":"codesandbox"},{"site":"instagram"}],
+    "socials":[{
+        "site":"github",
+        "link":"https://github.com/PatrickValera"
+        },{
+        "site":"linkedin",
+        "link":"https://www.linkedin.com/in/patrick-valera-285225223/"
+        },{
+        "site":"codesandbox"
+        },{
+        "site":"instagram",
+        "link":"https://www.instagram.com/kanyewest/"
+        }],
     "projects":[{
         "id":1,
         "title":"Groovemade",
         "description":"A fullstack online E-commerce store, complete with user creation, management, order placement and admin control. Features a sleek and modern design.",
         "stack":["React","CSS","NodeJS","Material UI","Redux"],
-
-        "link":"/"
+        "link":"https://groovemade.herokuapp.com/"
     },{
         "id":2,
         "title":"Candelebra",
         "description":"A real-time, mock stock, trading platform. Utilizes Rechart for graphing stock prices. Allows user to view real time stock prices and place trade orders.",
         "stack":["React","NodeJS","Material UI","Socket IO","Redux"],
-        "link":"/"
+        "link":"http://candelebra.herokuapp.com/"
     },{
         "id":3,
         "title":"Artifox",
         "description":"A Fullstack Online Store. Based from theartifox.com and built from scratch. Styling done via SASS and CSS modules",
         "stack":["Javascript","React","NodeJS","Material UI","SASS","Redux"],
-        "link":"/"
+        "link":"http://artifoxclone.herokuapp.com/"
     },{
         "id":4,
         "title":"ChatterCord",
         "description":"A realtime messaging web app utilizing Socket IO. Keeps track and stores messages from users into a database.",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
-        "link":"/"
+        "link":"https://chattercord.herokuapp.com/"
     },{
         "id":5,
         "title":"Recipe Finder",
         "description":"Connects to a third party API to search for food recipes based on the user's input",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
-        "link":"/"
+        "link":"https://recipefinderpatrick.herokuapp.com/"
     },{
         "id":6,
         "title":"Spacetagram",
         "description":"An image gallery that fetches Nasa's image of the day all the way from the 1980's",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
-        "link":"/"
+        "link":"http://spacetagram-pat.herokuapp.com/"
     },{
         "id":7,
         "title":"Project 7",
