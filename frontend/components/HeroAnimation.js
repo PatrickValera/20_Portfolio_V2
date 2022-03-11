@@ -103,7 +103,11 @@ const HeroAnimation = () => {
     return (
         <>
             <Box className='hero-animation' sx={{
-                position: 'relative', flex: '25% 1 1', maxWidth: '300px', height: { xs: '150px', md: '300px' },
+                margin:'auto',
+                position: 'relative', 
+                width:'100%',
+                maxWidth: '300px', 
+                height: { xs: '150px', md: '300px' },
                 overflowY: 'hidden'
                 // border: '1px solid blue'
             }}>

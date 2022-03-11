@@ -86,7 +86,7 @@ const Header = ({ isLight, setTheme }) => {
           onChange={() => (setTheme(state => !state))}
           inputProps={{ 'aria-label': 'controlled' }}
         />
-        <Box sx={{ cursor: 'pointer' }} onClick={() => setNavOpen(x => !x)}>
+        <Box sx={{ cursor: 'pointer',display:{xs:'block',md:'none'} }} onClick={() => setNavOpen(x => !x)}>
           {navOpen ? <AiOutlineClose /> : <FaBars />}
         </Box>
       </Box>
