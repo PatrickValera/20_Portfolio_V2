@@ -7,25 +7,27 @@ const Header = ({ isLight, setTheme }) => {
   const [navOpen, setNavOpen] = useState(false)
   useEffect(() => {
     const header = document.querySelector('.header')
-    console.log(header)
     let lastScroll = window.scrollY
     let handleScroll = () => {
-      if (window.scrollY > lastScroll) {
+      if (window.scrollY-150 > lastScroll) {
         console.log('down')
         header.style.opacity = '0'
+      lastScroll = window.scrollY-150
+
       }
-      else {
+      else if(lastScroll>window.scrollY) {
+      lastScroll = window.scrollY
+
         console.log('up')
         header.style.opacity = '1'
       }
-      console.log(window.scrollY)
-      if (window.scrollY > 400) {
+      // console.log(window.scrollY)
+      if (window.scrollY > 300) {
         header.style.borderBottom = '1px solid black'
       }
       else {
         header.style.borderBottom = '0px solid black'
       }
-      lastScroll = window.scrollY
     }
     window.addEventListener('scroll', handleScroll)
     return (() => {
