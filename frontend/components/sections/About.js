@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Fade from '../Fade'
 import { Box, Typography, Stack, Paper } from '@mui/material'
 import { styled } from '@mui/material/styles';
 import { IoIosFolder } from 'react-icons/io'
 import Icon from '../Icon';
+import Folder from '../file-system/Folder';
+import FileSystem from '../file-system/FileSystem';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#eeeee',
@@ -15,6 +17,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const About = () => {
+    const [path, setPath] = useState('/')
     return (
         <Box id='about' sx={{ display: 'flex', mb: '20vh' }}>
             <Box sx={{ flex: '400px 1 1', px: 2 }}>
@@ -25,15 +28,17 @@ const About = () => {
                 </Fade>
                 <Fade>
                     <Typography variant='body2' sx={{ mb: 3 }}>
-                        {`Hi there. My name is Patrick and I'm a passionate web developer. I had a early introduction to web development back in 2012 but I never really started seriously learning about web development until 2020.`}
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        {/* {`Hi there. My name is Patrick and I'm a passionate web developer. I had a early introduction to web development back in 2012 but I never really started seriously learning about web development until 2020.`} */}
                     </Typography>
                     <Typography variant='body2' sx={{ mb: 3 }}>
-                        {` For the most part, I taught myself how to create web apps thru youtube tutorials, and Udemy courses. I've garned numerous certificates and built 10+ projects in the last year. I also recenlty won my first hackathon which was orginized by MongoDB.`}
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        {/* {` For the most part, I taught myself how to create web apps thru youtube tutorials, and Udemy courses. I've garned numerous certificates and built 10+ projects in the last year. I also recenlty won my first hackathon which was orginized by MongoDB.`} */}
                     </Typography>
                     <Typography variant='body2' sx={{ mb: 1 }}>
-                        {`Herer are some technologies I'm currently learning:`}
+                        {/* {`Herer are some technologies I'm currently learning:`} */}
                     </Typography>
-                    <Stack direction='row' sx={{ pl: 2,flexWrap:'wrap',gap:1,justifyContent:'left' }}>
+                    <Stack direction='row' sx={{ pl: 2, flexWrap: 'wrap', gap: 1, justifyContent: 'left' }}>
                         <Item>TypeScript</Item>
                         <Item>Redis</Item>
                         <Item>GraphQL</Item>
@@ -42,10 +47,23 @@ const About = () => {
                 </Fade>
             </Box>
             <Box sx={{ display: { xs: 'none', md: 'block' }, flex: '300px 1 1' }}>
-                <Fade sx={{ display: 'flex', flexWrap: 'wrap', border: '3px solid', borderColor: 'text.primary', height: '400px', p: 4 }}>
-                    <Icon label='Photos' sx={{ mx: 2, flex: '70px 1 1', alignItems: 'center', display: 'flex', flexDirection: 'column' }}><IoIosFolder size='2.5rem' /></Icon>
-                    <Icon label='Documents' sx={{ mx: 2, flex: '70px 1 1', alignItems: 'center', display: 'flex', flexDirection: 'column' }}><IoIosFolder size='2.5rem' /></Icon>
-                    <Icon label='Others' sx={{ mx: 2, flex: '70px 1 1', alignItems: 'center', display: 'flex', flexDirection: 'column' }}><IoIosFolder size='2.5rem' /></Icon>
+                <Fade sx={{ border: '3px solid', borderColor: 'text.primary', height: '400px', p: 1 }}>
+                    <Folder setPath={setPath} path={path} name='/'>
+                        <Folder setPath={setPath} path={path} name='/photos'>
+                            <Folder setPath={setPath} path={path} name='/photos/me'>
+                                <p>PICS OF ME</p>
+                            </Folder >
+                            <Folder setPath={setPath} path={path} name='/photos/places'>
+                                <p>PICS OF PLACES</p>
+                            </Folder >
+                        </Folder >
+                        <Folder setPath={setPath} path={path} name='/Documents'>
+                            <p>SOME DOCUMENTS</p>
+                        </Folder>
+                        <Folder setPath={setPath} path={path} name='/Other'>
+                            <p>OTHER FILES</p>
+                        </Folder>
+                    </Folder>
                 </Fade>
             </Box>
         </Box>
