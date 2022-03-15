@@ -19,7 +19,7 @@ const Introduction = () => {
       }}>
         <Typography variant='body1' color='primary.main'> Hello, my name is</Typography>
         <Typography variant='h2'> Patrick Valera.</Typography>
-        <Typography variant='body1' sx={{ maxWidth: '300px' }} gutterBottom>
+        <Typography variant='body1' sx={{ maxWidth: '330px' }} gutterBottom>
           {`I am a Computer Science student and a self-taught web developer. I aim to deepen my understanding of various technologies and build exceptional products.`}
         </Typography>
         <Button variant='text' endIcon={<BiRightArrowAlt />}>

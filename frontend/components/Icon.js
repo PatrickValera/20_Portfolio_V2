@@ -7,7 +7,7 @@ import { BsFillChatTextFill } from 'react-icons/bs';
 
 const Icon = ({ site, sx, children, label,link }) => {
     let icon = useRef(null)
-    let props = { size: '1.5rem', className: '' }
+    let props = { size: '1rem', className: '' }
     switch (site) {
         case 'github': {
             icon.current = <RiGithubFill {...props} />
@@ -33,7 +33,7 @@ const Icon = ({ site, sx, children, label,link }) => {
     }
     return (
         <Box
-            sx={[{ ...sx, cursor: 'pointer', transform: 'translateY(0)', transition: 'all 200ms ease-in-out' },
+            sx={[{ ...sx, fontSize:'2rem',cursor: 'pointer', transform: 'translateY(0)', transition: 'all 200ms ease-in-out' },
             (theme) => ({
                 '&:hover': {
                     color: theme.palette.primary.main,
@@ -44,7 +44,6 @@ const Icon = ({ site, sx, children, label,link }) => {
         >
             <a href={link?link:'/'} style={{color:'inherit'}}>
                 {children ? children : icon.current}
-
             </a>
             <Typography fontSize='.85rem' sx={{ textOverflow: 'ellipsis' }}>{label && label}</Typography>
         </Box>

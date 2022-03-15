@@ -92,7 +92,7 @@ img {
 }
 
 .start-animate {
-  transition: all 12000ms linear !important;
+  transition: all 15000ms linear !important;
   transform: translateY(-110%) !important;
   display: block;
 }
@@ -102,10 +102,10 @@ img {
 }
 .start {
   transform: translateY(-110%) !important;
-  transition: all 6000ms linear !important;
+  transition: all 7500ms linear !important;
 }
 .start2 {
-  transition: all 12000ms linear !important;
+  transition: all 15000ms linear !important;
   transform: translateY(-110%) !important;
 }
 
