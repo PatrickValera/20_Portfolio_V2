@@ -52,21 +52,21 @@
         "link":"http://spacetagram-pat.herokuapp.com/"
     },{
         "id":7,
-        "title":"Project 7",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
-        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
-        "link":"/"
+        "title":"Studi fi",
+        "description":"Video player for a curated lofi/study playlist. Makes use of youtube's iframe API",
+        "stack":["React","NextJS","CSS","MaterialUI"],
+        "link":"https://studifi.vercel.app/"
     },{
         "id":8,
-        "title":"Project 8",
+        "title":"Portfolio V1",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
-        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
-        "link":"/"
+        "stack":["React"],
+        "link":"https://www.patrickvalera.com/"
     },{
         "id":9,
-        "title":"Project 9",
+        "title":"Portfolio V2",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
-        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
-        "link":"/"
+        "stack":["React"],
+        "link":"https://portfoliopv0715.vercel.app/"
     }]
 }

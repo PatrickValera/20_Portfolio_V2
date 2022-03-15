@@ -5,7 +5,7 @@ import { Box, Typography } from '@mui/material';
 import { BsFillChatTextFill } from 'react-icons/bs';
 
 
-const Icon = ({ site, sx, children, label,link }) => {
+const Icon = ({color, site, sx, children, label,link }) => {
     let icon = useRef(null)
     let props = { size: '1rem', className: '' }
     switch (site) {
@@ -33,7 +33,7 @@ const Icon = ({ site, sx, children, label,link }) => {
     }
     return (
         <Box
-            sx={[{ ...sx, fontSize:'2rem',cursor: 'pointer', transform: 'translateY(0)', transition: 'all 200ms ease-in-out' },
+            sx={[{ ...sx,cursor: 'pointer', transform: 'translateY(0)', transition: 'all 200ms ease-in-out' },
             (theme) => ({
                 '&:hover': {
                     color: theme.palette.primary.main,
@@ -42,7 +42,7 @@ const Icon = ({ site, sx, children, label,link }) => {
             })
             ]}
         >
-            <a href={link?link:'/'} style={{color:'inherit'}}>
+            <a href={link?link:'/'} style={{color:color}}>
                 {children ? children : icon.current}
             </a>
             <Typography fontSize='.85rem' sx={{ textOverflow: 'ellipsis' }}>{label && label}</Typography>

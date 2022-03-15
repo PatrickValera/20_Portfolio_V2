@@ -1,16 +1,18 @@
-import { Box, Link, Typography } from '@mui/material'
+import { Box, Button, Link, Typography } from '@mui/material'
 import React from 'react'
 import Fade from '../Fade'
-
+import { FiSend } from 'react-icons/fi'
 const Contact = () => {
   return (
-    <Box id='contact'>
-      <Fade sx={{alignItems:'center',display:'flex',flexDirection:'column'}}>
+    <Box id='contact' sx={{ mb: '15vh' }}>
+      <Fade sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
         <Typography variant='h6' sx={{ mt: '10vh', mb: 2 }}>Contact Me</Typography>
-        <Typography variant='body1' sx={{  mb: 2 }}>You can message me about anything through email.</Typography>
-        <Link variant='body1' href='mailto:patrickvalera500@gmail.com' sx={{p:1,border:'1px solid black'}}>SAY HELLO</Link>
+        <Typography variant='body1' sx={{ mb: 2 ,textAlign:'center'}}>The best way to contact me is by email.<br/> Inbox is always open. :)</Typography>
+        <Button variant='outlined'>
+          <Link underline='none' variant='body1' href='mailto:patrickvalera500@gmail.com' >Say Hi <FiSend /></Link>
+        </Button>
       </Fade>
-      </Box>
+    </Box>
   )
 }
 

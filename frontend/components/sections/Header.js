@@ -1,4 +1,4 @@
-import { Box, Link, Switch, Typography } from '@mui/material'
+import { Box, Button, Link, Switch, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { FaBars } from 'react-icons/fa'
 import { AiOutlineClose } from 'react-icons/ai'
@@ -9,24 +9,22 @@ const Header = ({ isLight, setTheme }) => {
     const header = document.querySelector('.header')
     let lastScroll = window.scrollY
     let handleScroll = () => {
-      if (window.scrollY-150 > lastScroll) {
-        console.log('down')
+      if (window.scrollY - 100 > lastScroll) {
+        // console.log('down')
         header.style.opacity = '0'
-      lastScroll = window.scrollY-150
-
+        lastScroll = window.scrollY - 100
       }
-      else if(lastScroll>window.scrollY) {
-      lastScroll = window.scrollY
-
-        console.log('up')
+      else if (lastScroll > window.scrollY) {
+        lastScroll = window.scrollY
+        // console.log('up')
         header.style.opacity = '1'
       }
-      // console.log(window.scrollY)
       if (window.scrollY > 300) {
-        header.style.borderBottom = '1px solid black'
+        header.style.boxShadow = '0px 5px 15px #555'
       }
       else {
-        header.style.borderBottom = '0px solid black'
+        header.style.boxShadow = 'none'
+
       }
     }
     window.addEventListener('scroll', handleScroll)
@@ -35,8 +33,8 @@ const Header = ({ isLight, setTheme }) => {
     })
 
   }, [])
-  return (
 
+  return (
     <Box
       className='header'
       sx={{
@@ -52,7 +50,7 @@ const Header = ({ isLight, setTheme }) => {
       }}
     >
       <Typography variant='h5' sx={{ flexGrow: '1' }}>
-        PV <Typography component='span' variant='body1'>(development)</Typography>
+        PV <Typography component='span' variant='body1'>(...in development)</Typography>
       </Typography>
       <Box component='nav' display='flex'
         className={navOpen ? 'nav-open' : 'nav-close'}
@@ -88,9 +86,9 @@ const Header = ({ isLight, setTheme }) => {
           onChange={() => (setTheme(state => !state))}
           inputProps={{ 'aria-label': 'controlled' }}
         />
-        <Box sx={{ cursor: 'pointer',display:{xs:'block',md:'none'} }} onClick={() => setNavOpen(x => !x)}>
+        <Button sx={{ cursor: 'pointer', alignItems:'center',minWidth:'0',display: { xs: 'flex', md: 'none' } }} onClick={() => setNavOpen(x => !x)}>
           {navOpen ? <AiOutlineClose /> : <FaBars />}
-        </Box>
+        </Button>
       </Box>
     </Box>
 

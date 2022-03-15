@@ -61,7 +61,7 @@ const Projects = ({ projects }) => {
         <Typography variant='h5' textAlign='center' sx={{ mt: '10vh', mb: 4 }}>Other Projects</Typography>
       </Fade>
       {/* OTHER PROJECT START HERE */}
-      <Box display='flex' sx={{ flexWrap: 'wrap', gap: 2, mb: 4 }}>
+      <Box display='flex' sx={{ flexWrap: 'wrap', gap: 2, mb: 4,px:{xs:1,md:3} }}>
         {projects.slice(3, 9).map((project, index) => (
           < Fade key={index} sx={{ flex: '30% 1 1', minWidth: '200px', minHeight: '200px' }}>
             <Box sx={[{ p: 2, display: 'flex', flexDirection: 'column', bgcolor: 'text.primary', color: 'background.paper', height: '100%', cursor: 'pointer', transition: 'all 200ms ease-out' }, theme => ({

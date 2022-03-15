@@ -20,7 +20,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const About = () => {
     const [path, setPath] = useState('/')
     return (
-        <Box id='about' sx={{ display: 'flex', mb: '20vh' }}>
+        <Box id='about' sx={{ display: 'flex', mb: '20vh',px:{xs:0,md:2} }}>
             <Box sx={{ flex: '400px 1 1', px: 2 }}>
                 <Fade>
                     <Typography variant='h5' sx={{ mb: 4 }}>
@@ -28,16 +28,14 @@ const About = () => {
                     </Typography>
                 </Fade>
                 <Fade>
-                    <Typography variant='body2' sx={{ mb: 3 }}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        {/* {`Hi there. My name is Patrick and I'm a passionate web developer. I had a early introduction to web development back in 2012 but I never really started seriously learning about web development until 2020.`} */}
-                    </Typography>
-                    <Typography variant='body2' sx={{ mb: 3 }}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        {/* {` For the most part, I taught myself how to create web apps thru youtube tutorials, and Udemy courses. I've garned numerous certificates and built 10+ projects in the last year. I also recenlty won my first hackathon which was orginized by MongoDB.`} */}
-                    </Typography>
-                    <Typography variant='body2' sx={{ mb: 1 }}>
-                        {/* {`Herer are some technologies I'm currently learning:`} */}
+                    <Typography variant='body2' sx={{ mb: 1, }}>
+                        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`}
+                        {/* {`Hi there. My name is Patrick and I'm a passionate web developer. I had a early introduction to web development back in 2012 but I never really started seriously learning about web development until 2020.`}
+                        <br style={{ display: 'block', margin: '1.5rem', content: '""' }} />
+                        {` For the most part, I taught myself how to create web apps thru youtube tutorials, and Udemy courses. I've garned numerous certificates and built 10+ projects in the last year. I also recenlty won my first hackathon which was orginized by MongoDB.`}
+                        <br style={{ display: 'block', margin: '1.5rem', content: '""' }} />
+                        {`Herer are some technologies I'm currently learning:`} */}
                     </Typography>
                     <Stack direction='row' sx={{ pl: 2, flexWrap: 'wrap', gap: 1, justifyContent: 'left' }}>
                         <Item>TypeScript</Item>
@@ -52,7 +50,7 @@ const About = () => {
                     <Folder setPath={setPath} path={path} name='/'>
                         <Folder setPath={setPath} path={path} name='/photos'>
                             <Folder setPath={setPath} path={path} name='/photos/me'>
-                                <Gallery/>
+                                <Gallery />
                             </Folder >
                             <Folder setPath={setPath} path={path} name='/photos/places'>
                                 <p>PICS OF PLACES</p>

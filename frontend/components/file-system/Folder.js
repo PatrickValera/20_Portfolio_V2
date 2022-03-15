@@ -1,7 +1,7 @@
 import React from 'react'
-import Icon from '../Icon'
 import { IoIosFolder } from 'react-icons/io'
 import { Box, Button, Typography } from '@mui/material'
+import { AiOutlineLeft } from 'react-icons/ai'
 
 const Folder = ({ name, setPath, path, children }) => {
     const handleClick = () => {
@@ -19,7 +19,7 @@ const Folder = ({ name, setPath, path, children }) => {
     if (name === path || name === path.slice(0, name.length)) return (
         <>
             {name === path.slice(0, name.length + 1) ? <>
-                <Button onClick={handleBack}>Back</Button>
+                <Button onClick={handleBack} sx={{minWidth:0}}><AiOutlineLeft/></Button>
                 {/* <Typography variant='body1'>{path}</Typography> */}
                 <Box sx={{ display: 'flex',alignItems:"flex-start", p:1 }}>
                     {children}
