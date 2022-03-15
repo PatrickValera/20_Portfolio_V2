@@ -6,6 +6,7 @@ import { IoIosFolder } from 'react-icons/io'
 import Icon from '../Icon';
 import Folder from '../file-system/Folder';
 import FileSystem from '../file-system/FileSystem';
+import Gallery from '../Gallery';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#eeeee',
@@ -51,7 +52,7 @@ const About = () => {
                     <Folder setPath={setPath} path={path} name='/'>
                         <Folder setPath={setPath} path={path} name='/photos'>
                             <Folder setPath={setPath} path={path} name='/photos/me'>
-                                <p>PICS OF ME</p>
+                                <Gallery/>
                             </Folder >
                             <Folder setPath={setPath} path={path} name='/photos/places'>
                                 <p>PICS OF PLACES</p>

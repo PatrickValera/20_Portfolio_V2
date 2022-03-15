@@ -52,7 +52,7 @@ const Header = ({ isLight, setTheme }) => {
       }}
     >
       <Typography variant='h5' sx={{ flexGrow: '1' }}>
-        PV
+        PV <Typography component='span' variant='body1'>(development)</Typography>
       </Typography>
       <Box component='nav' display='flex'
         className={navOpen ? 'nav-open' : 'nav-close'}
