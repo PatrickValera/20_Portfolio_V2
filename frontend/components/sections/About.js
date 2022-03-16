@@ -4,6 +4,7 @@ import { Box, Typography, Stack, Paper } from '@mui/material'
 import { styled } from '@mui/material/styles';
 import Folder from '../file-system/Folder';
 import Gallery from '../Gallery';
+import Text from '../file-system/Text';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#eeeee',
@@ -57,7 +58,7 @@ const About = () => {
                             </Folder >
                         </Folder >
                         <Folder setPath={setPath} path={path} name='/Documents'>
-                            <p>SOME DOCUMENTS</p>
+                            <Text path={path} name='/Documents/text'>DOCS</Text>
                         </Folder>
                         <Folder setPath={setPath} path={path} name='/Other'>
                             <p>OTHER FILES</p>

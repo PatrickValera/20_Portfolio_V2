@@ -1,7 +1,6 @@
 import { Box, Typography, Paper, Stack } from '@mui/material'
 import React from 'react'
 import Fade from '../Fade'
-import Icon from '../Icon'
 import { styled } from '@mui/material/styles';
 import { IKImage, IKContext } from 'imagekitio-react';
 const Item = styled(Paper)(({ theme }) => ({
@@ -51,7 +50,7 @@ const Projects = ({ projects }) => {
                 )
               })}
             </Stack>
-            <Icon site={'github'} />
+            {/* <Icon site={'github'} ===============================/> */}
           </Box>
 
         </Fade>
@@ -74,7 +73,7 @@ const Projects = ({ projects }) => {
             })]}>
               <Typography className='proj-title' variant='h6' gutterBottom>{project.title}</Typography>
               <Typography variant='body1' sx={{ flexGrow: '1', mt: 2 }}>{project.description}</Typography>
-              <Icon site={'github'} sx={{ alignSelf: 'flex-end' }} />
+              {/* <Icon site={'github'} sx={{ alignSelf: 'flex-end' }} />======================= */}
             </Box>
           </Fade>
         ))}
