@@ -76,8 +76,12 @@ img {
   top: 95%;
 }
 .nav-open{
-  right:0;
+  right:0 !important;
   opacity: 1; 
+}
+.nav-close{
+  right:-70vw;
+  opacity: 1;
 }
 
 /* HERO ANIMATION COMPONENT */

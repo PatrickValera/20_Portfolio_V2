@@ -2,10 +2,7 @@ import React, { useState } from 'react'
 import Fade from '../Fade'
 import { Box, Typography, Stack, Paper } from '@mui/material'
 import { styled } from '@mui/material/styles';
-import { IoIosFolder } from 'react-icons/io'
-import Icon from '../Icon';
 import Folder from '../file-system/Folder';
-import FileSystem from '../file-system/FileSystem';
 import Gallery from '../Gallery';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -21,6 +18,7 @@ const About = () => {
     const [path, setPath] = useState('/')
     return (
         <Box id='about' sx={{ display: 'flex', mb: '20vh',px:{xs:0,md:2} }}>
+            {/* ABOUT ME PARAGRAPHS HERE ================= */}
             <Box sx={{ flex: '400px 1 1', px: 2 }}>
                 <Fade>
                     <Typography variant='h5' sx={{ mb: 4 }}>
@@ -45,15 +43,17 @@ const About = () => {
                     </Stack>
                 </Fade>
             </Box>
+            {/* END OF ABOUT ME PARAGRAPHS HERE ========== */}
+            {/* FILE SYSTEM ============================== */}
             <Box sx={{ display: { xs: 'none', md: 'block' }, flex: '300px 1 1' }}>
                 <Fade sx={{ border: '3px solid', borderColor: 'text.primary', height: '400px', p: 1 }}>
                     <Folder setPath={setPath} path={path} name='/'>
-                        <Folder setPath={setPath} path={path} name='/photos'>
-                            <Folder setPath={setPath} path={path} name='/photos/me'>
+                        <Folder setPath={setPath} path={path} name='/Photos'>
+                            <Folder setPath={setPath} path={path} name='/Photos/me'>
                                 <Gallery />
                             </Folder >
-                            <Folder setPath={setPath} path={path} name='/photos/places'>
-                                <p>PICS OF PLACES</p>
+                            <Folder setPath={setPath} path={path} name='/Photos/places'>
+                                <p>PICS </p>
                             </Folder >
                         </Folder >
                         <Folder setPath={setPath} path={path} name='/Documents'>
@@ -65,6 +65,7 @@ const About = () => {
                     </Folder>
                 </Fade>
             </Box>
+            {/* END OF FILE SYSTEM ======================== */}
         </Box>
     )
 }

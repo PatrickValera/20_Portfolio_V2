@@ -10,6 +10,7 @@ import Icon from '../components/Icon'
 import { BsFillChatTextFill } from 'react-icons/bs'
 import About from '../components/sections/About'
 import Contact from '../components/sections/Contact'
+import { SocialsNav } from '../components/SocialsNav'
 
 
 export default function Home({ setTheme }) {
@@ -27,12 +28,8 @@ export default function Home({ setTheme }) {
       {/* ========== END MAIN ========= */}
 
       {/* ========== SOCIALS ========== */}
-      <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'column', position: 'fixed', bottom: '0', left: '25px', alignItems: 'center' }}>
-        {socials.map((social, index) => (
-          <Icon key={index} site={social.site} color='text.primary'sx={{mb:1}} link={social.link} />
-        ))}
-        <Box sx={{ border: '1px solid', borderColor: 'text.primary', minHeight: '100px' }}></Box>
-      </Box>
+     
+      <SocialsNav socials={socials}/>
       {/* <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'column', position: 'fixed', bottom: '0', right: '40px', alignItems: 'center' }}>
         <Icon site='mail' />
         <Box sx={{ border: '1px solid', borderColor: 'text.primary', minHeight: '120px',mt:1 }}></Box>
