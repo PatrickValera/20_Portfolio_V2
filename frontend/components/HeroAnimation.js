@@ -122,7 +122,7 @@ const HeroAnimation = () => {
                 position: 'relative',
                 width: '100%',
                 maxWidth: '350px',
-                height: { xs: '150px', md: '250px' },
+                height: { xs: '170px', md: '250px' },
                 overflowY: 'hidden',
                 // border: '1px solid blue'
             }}>
@@ -130,7 +130,7 @@ const HeroAnimation = () => {
 
                     <Box className='tile' sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-start', gap: 2 }}>
                         {logos.map((component, index) => (
-                            <Box key={index} sx={[{ px: 1, pb: { xs: 2, md: 2 }, display: 'flex', width: { xs: '15%', md: '15%' } },
+                            <Box key={index} sx={[{ px: '12px', pb: { xs: 2, md: 2 }, display: 'flex', width: { xs: '15%', md: '15%' } },
                             { '&:hover': { transform: 'scale(1.15)' } }]}>
                                 {component}
                             </Box>

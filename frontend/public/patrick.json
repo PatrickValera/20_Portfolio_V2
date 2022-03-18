@@ -59,13 +59,13 @@
     },{
         "id":8,
         "title":"Portfolio V1",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
+        "description":"First portfolio page built with material ui components and deployed on heroku.",
         "stack":["React"],
         "link":"https://www.patrickvalera.com/"
     },{
         "id":9,
         "title":"Portfolio V2",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor imperdiet suscipit. Curabitur tempus sapien lobortis purus blandit lacinia. Aliquam finibus massa in orci aliquet hendrerit.",
+        "description":"Second revision of my portfolio built with material ui and deployed on vercel.",
         "stack":["React"],
         "link":"https://portfoliopv0715.vercel.app/"
     }]

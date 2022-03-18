@@ -39,8 +39,8 @@ const Header = ({ isLight, setTheme }) => {
       className='header'
       sx={{
         zIndex: '5',
-        px: 4,
-        py: 1,
+        px:{ xs:1,sm:2},
+        py: '.4rem',
         position: 'fixed',
         display: 'flex',
         alignItems: 'center',
@@ -53,6 +53,8 @@ const Header = ({ isLight, setTheme }) => {
         PV 
         <Typography component='span' variant='body1' color='error'>(...in development)</Typography>
       </Typography>
+
+      {/* NAVIGATION HERE ====================== */}
       <Box component='nav' display='flex'
         className={navOpen ? 'nav-open' : 'nav-close'}
         sx={{
@@ -70,7 +72,7 @@ const Header = ({ isLight, setTheme }) => {
           right: { xs: '-70vw', md: 'unset' },
           borderColor: 'background.paper',
           borderLeft: { xs: '1px solid', md: 'unset' },
-          borderColor: 'text.primary'
+          borderColor: 'red'
 
         }}
       >
