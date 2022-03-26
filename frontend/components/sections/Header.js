@@ -69,9 +69,10 @@ const Header = ({ isLight, setTheme }) => {
           width: { xs: '70vw', md: 'unset' },
           height: { xs: '100vh', md: 'unset' },
           right: { xs: `${navOpen?'0':'-70vw'}`, md: 'unset' },
-          borderColor: 'background.paper',
-          borderLeft: { xs: '1px solid', md: 'unset' },
-          borderColor: 'red'
+          bgcolor:{xs:'primary.light',md:'unset'}
+          // borderColor: 'background.paper',
+          // borderLeft: { xs: '1px solid', md: 'unset' },
+          // borderColor: 'red'
 
         }}
       >
