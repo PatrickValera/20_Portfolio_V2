@@ -51,14 +51,13 @@ const Header = ({ isLight, setTheme }) => {
     >
       <Typography variant='h5' sx={{ flexGrow: '1' }}>
         PV 
-        <Typography component='span' variant='body1' color='error'>(...in development)</Typography>
+        {/* <Typography component='span' variant='body1' color='error'>(...in development)</Typography> */}
       </Typography>
 
       {/* NAVIGATION HERE ====================== */}
       <Box component='nav' display='flex'
-        className={navOpen ? 'nav-open' : 'nav-close'}
+        // className={navOpen ? 'nav-open' : 'nav-close'}
         sx={{
-
           gap: 2,
           transition: 'all 300ms ease-in-out',
           flexDirection: { xs: 'column', md: 'row' },
@@ -69,7 +68,7 @@ const Header = ({ isLight, setTheme }) => {
           bgcolor: 'background.paper',
           width: { xs: '70vw', md: 'unset' },
           height: { xs: '100vh', md: 'unset' },
-          right: { xs: '-70vw', md: 'unset' },
+          right: { xs: `${navOpen?'0':'-70vw'}`, md: 'unset' },
           borderColor: 'background.paper',
           borderLeft: { xs: '1px solid', md: 'unset' },
           borderColor: 'red'
@@ -81,16 +80,16 @@ const Header = ({ isLight, setTheme }) => {
             <Typography variant='body1'>{section}</Typography>
           </Link>
         ))}
-
-      </Box>
-      <Box sx={{ zIndex: '5', display: 'flex', alignItems: 'center' }}>
         <Switch
           checked={isLight}
           onChange={() => (setTheme(state => !state))}
           inputProps={{ 'aria-label': 'controlled' }}
         />
+      </Box>
+
+      <Box sx={{ zIndex: '5', display: 'flex', alignItems: 'center' }}>
         <Button sx={{ cursor: 'pointer', alignItems:'center',minWidth:'0',display: { xs: 'flex', md: 'none' } }} onClick={() => setNavOpen(x => !x)}>
-          {navOpen ? <AiOutlineClose /> : <FaBars />}
+          {navOpen ? <AiOutlineClose size='1.4rem'  /> : <FaBars size='1.4rem' />}
         </Button>
       </Box>
     </Box>

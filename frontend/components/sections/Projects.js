@@ -24,7 +24,7 @@ const Projects = ({ projects }) => {
 
       {/* HIGHLIGHT PROJECTS START HERE */}
       {projects.slice(0, 3).map((project, index) => (
-        <Fade key={index} sx={{ display: 'grid', gridTemplateColumns: 'repeat(12,1fr)', position: 'relative', mb: '50px' }}>
+        <Fade key={index} sx={{ display: 'grid', gridTemplateColumns: 'repeat(12,1fr)', position: 'relative', mb: 3 }}>
           {/* HIGHLIGHT PROJECT IMAGE HERE */}
           <Box sx={{ gridArea: { xs: '1/1/-1/13', md: '1/1/-1/8',border:'2px solid ', }}}>
             <Box sx={{ height:'100%',borderColor:'text.primary',display:'flex',alignItems:'center',filter:{xs:'blur(1px)',md:'unset'}}}>
@@ -65,9 +65,9 @@ const Projects = ({ projects }) => {
         <Typography variant='h5' textAlign='center' sx={{ mt: '10vh', mb: 4 }}>Other Projects</Typography>
       </Fade>
       {/* OTHER PROJECT START HERE */}
-      <Box display='flex' sx={{ flexWrap: 'wrap', gap: 2, mb: 4,px:{xs:1,md:3} }}>
+      <Box display='flex' sx={{ flexWrap: 'wrap', gap: 2, mb: 3,px:{xs:1,md:3} }}>
         {projects.slice(3, 9).map((project, index) => (
-          < Fade key={index} sx={{ flex: '30% 1 1', minWidth: '200px', minHeight: '200px' }}>
+          < Fade key={index} sx={{ flex: '30% 1 1', minWidth: '200px', minHeight: {xs:'150px',md:'200px'} }}>
             <Box sx={[{ p: 2, display: 'flex', flexDirection: 'column', bgcolor: 'text.primary', color: 'background.paper', height: '100%', cursor: 'pointer', transition: 'all 200ms ease-out' }, theme => ({
               '&:hover': {
                 transform: 'translateY(-5px)',

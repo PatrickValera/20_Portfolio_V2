@@ -17,37 +17,31 @@
     "projects":[{
         "id":1,
         "title":"Groovemade",
-        "description":"A fullstack online E-commerce store, complete with user creation, management, order placement and admin control. Features a sleek and modern design.",
+        "description":"A fullstack online E-commerce store, complete with user creation, management, order placement and admin control. Also features a sleek and modern design.",
         "stack":["React","CSS","NodeJS","Material UI","Redux"],
         "link":"https://groovemade.herokuapp.com/"
     },{
         "id":2,
         "title":"Candelebra",
-        "description":"A real-time, mock stock, trading platform. Utilizes Rechart for graphing stock prices. Allows user to view real time stock prices and place trade orders.",
+        "description":"A real-time mock stock trading platform. Utilizes Rechart for graphing stock prices. Allows user to view real time stock prices and place trade orders.",
         "stack":["React","NodeJS","Material UI","Socket IO","Redux"],
         "link":"http://candelebra.herokuapp.com/"
     },{
         "id":3,
         "title":"Artifox",
-        "description":"A Fullstack Online Store. Based from theartifox.com and built from scratch. Styling done via SASS and CSS modules",
+        "description":"A Fullstack Online Store. Based off of theartifox.com and built from scratch. Styling done with SASS and CSS modules",
         "stack":["Javascript","React","NodeJS","Material UI","SASS","Redux"],
         "link":"http://artifoxclone.herokuapp.com/"
     },{
         "id":4,
         "title":"ChatterCord",
-        "description":"A realtime messaging web app utilizing Socket IO. Keeps track and stores messages from users into a database.",
+        "description":"A realtime messaging web app utilizing Socket IO. Keeps track and stores user messages into a database.",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"https://chattercord.herokuapp.com/"
     },{
-        "id":5,
-        "title":"Recipe Finder",
-        "description":"Connects to a third party API to search for food recipes based on the user's input",
-        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
-        "link":"https://recipefinderpatrick.herokuapp.com/"
-    },{
         "id":6,
         "title":"Spacetagram",
-        "description":"An image gallery that fetches Nasa's image of the day all the way from the 1980's",
+        "description":"An image gallery that fetches Nasa's image of the day all the way from the 1980's. Features an image viewer which can be controlled by the user.",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"http://spacetagram-pat.herokuapp.com/"
     },{
@@ -56,6 +50,12 @@
         "description":"Video player for a curated lofi/study playlist. Makes use of youtube's iframe API",
         "stack":["React","NextJS","CSS","MaterialUI"],
         "link":"https://studifi.vercel.app/"
+    },{
+        "id":5,
+        "title":"Recipe Finder",
+        "description":"Connects to a third party API to search for food recipes based on the user's input",
+        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
+        "link":"https://recipefinderpatrick.herokuapp.com/"
     },{
         "id":8,
         "title":"Portfolio V1",

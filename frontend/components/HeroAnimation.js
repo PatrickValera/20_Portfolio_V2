@@ -128,7 +128,7 @@ const HeroAnimation = () => {
             }}>
                 <Box className='tiles-container init ' ref={container} sx={{ transition: 'all 0ms linear', position: 'absolute', transform: 'translateY(100%)' }}>
 
-                    <Box className='tile' sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-start', gap: 2 }}>
+                    <Box className='tile' sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-start', gap: 2}}>
                         {logos.map((component, index) => (
                             <Box key={index} sx={[{ px: '12px', pb: { xs: 2, md: 2 }, display: 'flex', width: { xs: '15%', md: '15%' } },
                             { '&:hover': { transform: 'scale(1.15)' } }]}>
@@ -140,7 +140,7 @@ const HeroAnimation = () => {
                 <Box className='tiles-container ' ref={container2} sx={{ transition: 'all 0ms linear', position: 'absolute', transform: 'translateY(100%)' }}>
                     <Box className='tile' sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
                         {logos.map((component, index) => (
-                            <Box key={index} sx={[{ px: 1, pb: { xs: 2, md: 2 }, display: 'flex', width: { xs: '15%', md: '15%' } },
+                            <Box key={index} sx={[{ px: '12px', pb: { xs: 2, md: 2 }, display: 'flex', width: { xs: '15%', md: '15%' } },
                             { '&:hover': { transform: 'scale(1.15)' } }]}>
                                 {component}
                             </Box>

@@ -76,7 +76,7 @@ img {
   top: 95%;
 }
 .nav-open{
-  right:0 !important;
+  right:0;
   opacity: 1; 
 }
 .nav-close{
