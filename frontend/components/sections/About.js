@@ -40,7 +40,7 @@ const About = () => {
                         {`As of today, I have gained considerable technical knowledge on some of the most popular technologies such as React, VueJS, MongoDB and NodeJS. My technical background has allowed me to create noteworthy projects and win hackathons such as `}
                         <a href='https://dev.to/devteam/congrats-to-the-mongodb-atlas-hackathon-winners-4cc0'
                         style={{color:'green', textDecoration:'underline'}}> 
-                        MongoDB's 2021 E-commerce hackathon
+                        {`MongoDB's 2021 E-commerce hackathon`}
                         </a>
                         <br style={{ display: 'block', margin: '1.5rem', content: '""' }} />
                         {`At the moment, I'm honing my skills on the following technologies:`}

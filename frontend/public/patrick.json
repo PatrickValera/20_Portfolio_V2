@@ -41,7 +41,7 @@
     },{
         "id":6,
         "title":"Spacetagram",
-        "description":"An image gallery that fetches Nasa's image of the day all the way from the 1980's. Features an image viewer which can be controlled by the user.",
+        "description":"An image gallery that fetches Nasa's image of the day, all the way from the 1980's. Features an image viewer which can be controlled by the user.",
         "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
         "link":"http://spacetagram-pat.herokuapp.com/"
     },{
