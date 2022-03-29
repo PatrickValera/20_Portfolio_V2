@@ -17,7 +17,7 @@ const Projects = ({ projects }) => {
     <Box id='projects' sx={{px:{xs:0,md:'50px'}}}>
 
       <Fade>
-        <Box display='flex' sx={{ mt: '10vh', mb: 2, alignItems: 'center' }}>
+        <Box display='flex' sx={{  mb: 3, alignItems: 'center' }}>
           <Typography variant='h5' sx={{}}>Project Highlights</Typography>
         </Box>
       </Fade>

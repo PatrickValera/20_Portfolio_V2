@@ -19,7 +19,17 @@ const Item = styled(Paper)(({ theme }) => ({
 const About = () => {
   const [path, setPath] = useState('/')
   return (
-    <Box id='about' sx={{ display: 'flex', mb: '20vh', flexWrap:'wrap', gap:2, alignItems:'center', px: { xs: 0, md: 2 } }}>
+    <Box
+      id='about'
+      sx={{
+        display: 'flex',
+        mb: '20vh',
+        flexWrap: 'wrap',
+        gap: 2,
+        alignItems: 'center',
+        px: { xs: 0, md: 2 },
+      }}
+    >
       {/* ABOUT ME PARAGRAPHS HERE ================= */}
       <Box sx={{ flex: '400px 1 1', px: 2 }}>
         <Fade>
@@ -36,15 +46,18 @@ const About = () => {
                         {` For the most part, I taught myself how to create web apps thru youtube tutorials, and Udemy courses. I've garned numerous certificates and built 10+ projects in the last year. I also recenlty won my first hackathon which was orginized by MongoDB.`}
                         <br style={{ display: 'block', margin: '1.5rem', content: '""' }} />
                         {`Herer are some technologies I'm currently learning:`} */}
-            {`Hi there. I'm Patrick and I'm a passionate web developer who enjoys creating web interfaces. My coding journey began in 2012 when I took web development and programming classes. Some of my early projects such as blog posts involved the use of HTML and CSS.`}
+            {`Hi there. I'm Patrick and I'm a passionate web developer who enjoys creating web interfaces. My coding journey began in 2012 when I took web development and programming classes. Some of my early projects involved using HTML and CSS to create static websites.`}
             <br style={{ display: 'block', margin: '1.5rem', content: '""' }} />
             {`As of today, I have gained considerable technical knowledge on some of the most popular technologies such as React, VueJS, MongoDB and NodeJS. My technical background has allowed me to create noteworthy projects and win hackathons such as `}
-            <a
-              href='https://dev.to/devteam/congrats-to-the-mongodb-atlas-hackathon-winners-4cc0'
-              style={{ color: 'green', textDecoration: 'underline' }}
-            >
-              {`MongoDB's 2021 E-commerce hackathon`}
-            </a>
+            <Typography component='span' color='success.main'>
+              {' '}
+              <a
+                href='https://dev.to/devteam/congrats-to-the-mongodb-atlas-hackathon-winners-4cc0'
+                style={{ textDecoration: 'underline' }}
+              >
+                {`MongoDB's 2021 E-commerce hackathon`}
+              </a>
+            </Typography>
             <br style={{ display: 'block', margin: '1.5rem', content: '""' }} />
             {`At the moment, I'm honing my skills on the following technologies:`}
           </Typography>
@@ -69,10 +82,9 @@ const About = () => {
             // height: '400px',
             p: 1,
             // FOR ANIMATION
-            display:'flex',
-            justifyContent:'center',
-            alignItems:'center'
-
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           {/* <Folder setPath={setPath} path={path} name='/'>

@@ -52,8 +52,35 @@ img {
   color: rgba(255, 240, 157, 0.911);
   transform: translateY(-5px);
 }
+/* HEADER NAV */
+.intro-fade{
+  opacity: 0;
+  transform: translateY(-30px);
+  /* animation-name: intro-fade; */
+  /* animation-duration: 1s; */
+}
+.intro-fade-done{
+  position: relative;
+  transition:all .45s ease-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+/* @keyframes intro-fade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
 
-.nav-link {
+  75% {
+  } 
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+
+  }
+} */
+/* .nav-link {
   position: relative;
   transition: all 300ms ease-in-out;
 }
@@ -82,7 +109,7 @@ img {
 .nav-close{
   right:-70vw;
   opacity: 1;
-}
+} */
 
 /* HERO ANIMATION COMPONENT */
 .hero-icon {

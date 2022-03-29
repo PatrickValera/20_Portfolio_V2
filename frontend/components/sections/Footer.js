@@ -8,9 +8,9 @@ const Footer = () => {
         variant='body1'
         sx={{ margin: 'auto', width: 'min-content', whiteSpace: 'noWrap',textAlign:'center' }}
       >
-        Built by Patrick Valera 2022<br/>
-        Bootstrapped with NEXTJS <br/>
-        Hosted by Vercel
+        Built by Patrick Valera 2022 <br/>
+        with NextJS
+        
       </Typography>
     </Box>
   )

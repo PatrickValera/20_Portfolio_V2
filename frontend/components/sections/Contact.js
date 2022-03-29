@@ -7,7 +7,7 @@ const Contact = () => {
     <Box id='contact' sx={{ mb: '15vh' }}>
       <Fade sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
         <Typography variant='h6' sx={{ mt: '10vh', mb: 2 }}>Contact Me</Typography>
-        <Typography variant='body1' sx={{ mb: 2 ,textAlign:'center'}}>I am curently looking for new opportunites and open for work<br/> {`Send me a message and I'll make sure to respond.`}</Typography>
+        <Typography variant='body1' sx={{ mb: 2 ,textAlign:'center'}}>I am curently looking for new opportunites and I'm also open for work.<br/> {`Send me a message and I'll get back to you.`}</Typography>
         <Button variant='outlined'>
           <Link underline='none' variant='body1' href='mailto:patrickvalera500@gmail.com' >Say Hi <FiSend /></Link>
         </Button>
