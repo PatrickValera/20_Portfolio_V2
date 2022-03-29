@@ -12,10 +12,10 @@ const Header = ({ isLight, setTheme }) => {
     const header = document.querySelector('.header')
     let lastScroll = window.scrollY
     let handleScroll = () => {
-      if (window.scrollY - 100 > lastScroll) {
+      if (window.scrollY - 70 > lastScroll) {
         // console.log('down')
         header.style.opacity = '0'
-        lastScroll = window.scrollY - 100
+        lastScroll = window.scrollY - 70
       } else if (lastScroll > window.scrollY) {
         lastScroll = window.scrollY
         // console.log('up')
@@ -38,8 +38,8 @@ const Header = ({ isLight, setTheme }) => {
       className='header'
       sx={{
         zIndex: '5',
-        px: { xs: 1, sm: 2 },
-        py: '.4rem',
+        px: 3,
+        py: 2,
         position: 'fixed',
         display: 'flex',
         alignItems: 'center',

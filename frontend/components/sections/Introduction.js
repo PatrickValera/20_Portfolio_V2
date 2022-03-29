@@ -22,8 +22,9 @@ const Introduction = () => {
     }}>
       {/* SUMMARY ABOUT ME HERE========== */}
       <Box className='fade' sx={{
-        pl: { xs: 1, md: 4 },
-        flex: '350px 1 1'
+        px: { xs: 2, md: 4 },
+        flex: '350px 1 1',
+        pb:'15vh',
       }}>
         <Typography variant='body1' fontSize='.7rem' color='primary.dark' fontWeight='600'> Hello, my name is</Typography>
         <Typography variant='h1' color='primary.main' fontWeight='600'sx={{fontSize:{xs:'2.4rem',sm:'3.1rem',md:'4.5rem',lg:'6rem'}}}> Patrick Valera.</Typography>
