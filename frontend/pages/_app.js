@@ -7,7 +7,7 @@ import Header from '../components/sections/Header'
 
 
 function MyApp({ Component, pageProps }) {
-  const [isLightTheme,setLightTheme]=useState(true)
+  const [isLightTheme,setLightTheme]=useState(false)
   useEffect(() => {
     const items = document.querySelectorAll(".fade")
     const observer = new IntersectionObserver(entries => {

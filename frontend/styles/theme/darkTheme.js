@@ -2,13 +2,16 @@ import { createTheme } from '@mui/material/styles';
 import { FaDharmachakra } from 'react-icons/fa';
 
 let darkTheme=createTheme({
-  // palette:{
-  //   mode:'dark'
-  // }
+  palette:{
+    mode:'dark'
+  }
 })
 darkTheme = createTheme({
   palette: {
     mode: 'dark',
+    primary:{
+      ...darkTheme.palette.primary,light:'#232323'
+    }
   },
   typography: {
     body1: {
