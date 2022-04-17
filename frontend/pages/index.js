@@ -17,7 +17,7 @@ export default function Home({ setTheme }) {
   return (
     <>
       {/* =========== MAIN =========== */}
-      <Container  component='main' maxWidth='lg' sx={{px:{xs:1,sm:2,md:'60px'}}}>
+      <Container  component='main' maxWidth='lg' sx={{px:{xs:2,sm:3,md:'65px'}}}>
         <Introduction />
         <About/>
         <Projects projects={projects} />

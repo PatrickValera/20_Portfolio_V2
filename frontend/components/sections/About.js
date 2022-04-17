@@ -10,7 +10,7 @@ import HeroAnimation from '../HeroAnimation'
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#eeeee',
   ...theme.typography.body2,
-  fontSize: '.85rem',
+  fontSize: '.70rem',
   textAlign: 'center',
   color: theme.palette.text.secondary,
   padding: '3px',

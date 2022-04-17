@@ -4,6 +4,9 @@ let lightTheme = createTheme({})
 lightTheme = createTheme({
   palette: {
     mode: 'light',
+    background:{
+      nav:'rgb(120, 215, 255)'
+    }
   },
   typography: {
     body1: {

@@ -118,36 +118,11 @@ img {
   /* border: 2px solid black; */
 }
 /* .hero-animation::-webkit-scrollbar { width: 0 !important } */
-.move {
-  transform: translateY(-500px);
-}
-.hero-animation {
-  position: relative;
-}
-
-.start-animate {
-  transition: all 15000ms linear !important;
-  transform: translateY(-110%) !important;
-  display: block;
-}
-
-.init {
-  transform: translateY(0%) !important;
-}
-.start {
-  transform: translateY(-110%) !important;
-  transition: all 7500ms linear !important;
-}
-.start2 {
-  transition: all 15000ms linear !important;
-  transform: translateY(-110%) !important;
-}
 
 /* IMAGE KIT IMAGES AND PROJECT IMAGES */
 .proj-image {
   -webkit-filter: grayscale(90%); /* Safari 6.0 - 9.0 */
   filter: grayscale(90%);
-  object-fit: cover;
 }
 .proj-image:hover{
   -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */

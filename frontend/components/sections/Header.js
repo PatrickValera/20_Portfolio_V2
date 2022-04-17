@@ -34,100 +34,124 @@ const Header = ({ isLight, setTheme }) => {
   }, [])
 
   return (
-    <Box
-      className='header'
-      sx={{
-        zIndex: '5',
-        px: 3,
-        py: 2,
-        position: 'fixed',
-        display: 'flex',
-        alignItems: 'center',
-        width: '100%',
-        transition: 'all 300ms ease-in-out',
-        backgroundColor: 'background.paper',
-      }}
-    >
-      <Typography
-        variant='h5'
-        sx={{ flexGrow: '1' }}
-        className={fadeClass}
-        style={{ transitionDelay: `0` }}
-      >
-        PV
-        {/* <Typography component='span' variant='body1' color='error'>(...in development)</Typography> */}
-      </Typography>
-
-      {/* NAVIGATION HERE ====================== */}
+    <>
       <Box
-        component='nav'
-        display='flex'
-        // className={navOpen ? 'nav-open' : 'nav-close'}
+        className='header'
         sx={{
-          gap: 2,
-          transition: 'all 300ms ease-in-out',
-          flexDirection: { xs: 'column', md: 'row' },
-          position: { xs: 'fixed', md: 'relative' },
-          top: '0',
-          justifyContent: 'center',
+          zIndex: 10,
+          py: 2,
+          position: 'fixed',
+          display: 'flex',
           alignItems: 'center',
-          bgcolor: 'background.paper',
-          width: { xs: '70vw', md: 'unset' },
-          height: { xs: '100vh', md: 'unset' },
-          right: { xs: `${navOpen ? '0' : '-70vw'}`, md: 'unset' },
-          bgcolor: { xs: 'primary.light', md: 'unset' },
-          // borderColor: 'background.paper',
-          // borderLeft: { xs: '1px solid', md: 'unset' },
-          // borderColor: 'red'
+          width: '100%',
+          transition: 'all 300ms ease-in-out',
+          backgroundColor: 'background.paper',
         }}
       >
-        {['ABOUT', 'SKILLS', 'PROJECTS', 'CONTACT'].map((section, index) => (
-          <Link
-            className={fadeClass}
-            underline='none'
-            key={index}
-            href={`#${section.toLowerCase()}`}
-            style={{ transitionDelay: `${(index + 2) * 100}ms` }}
-            sx={[
-              { color: 'text.primary', fontWeight: '600' },
-              (theme) => ({ '&:hover': { color: 'primary.main' } }),
-            ]}
-            onClick={() => setNavOpen(false)}
-          >
-            <Typography variant='body1'>{section}</Typography>
-          </Link>
-        ))}
-        <Box className={fadeClass} style={{ transitionDelay: `500ms` }}>
-          <Switch
-            checked={isLight}
-            onChange={() => setTheme((state) => !state)}
-            inputProps={{ 'aria-label': 'controlled' }}
-          />
+        <Typography
+          variant='h5'
+          sx={{ flexGrow: '1',pl:3 }}
+          className={fadeClass}
+          style={{ transitionDelay: `0` }}
+        >
+          PV
+        </Typography>
+
+        {/* NAVIGATION HERE ====================== */}
+        <Box
+          component='nav'
+          display='flex'
+          // className={navOpen ? 'nav-open' : 'nav-close'}
+          sx={{
+            zIndex: '10',
+            opacity: 0.99,
+            gap: 2,
+            transition: 'all 250ms ease-in-out',
+            flexDirection: { xs: 'column', md: 'row' },
+            position: { xs: 'fixed', md: 'relative' },
+            top: '0',
+            justifyContent: 'center',
+            alignItems: 'center',
+            bgcolor: {xs:'background.nav',md:'unset'},
+            width: { xs: '60vw', md: 'unset' },
+            height: { xs: '100vh', md: 'unset' },
+            right: { xs: `${navOpen ? '0' : '-70vw'}`, md: 'unset' },
+            // bgcolor: { xs: 'primary.light', md: 'unset' },
+            // borderColor: 'background.paper',
+            // borderLeft: { xs: '1px solid', md: 'unset' },
+            // borderColor: 'red'
+          }}
+        >
+          {['ABOUT', 'SKILLS', 'PROJECTS', 'CONTACT'].map((section, index) => (
+            <Link
+              className={fadeClass}
+              underline='none'
+              key={index}
+              href={`#${section.toLowerCase()}`}
+              style={{ transitionDelay: `${(index + 2) * 100}ms` }}
+              sx={[
+                { color: 'text.primary', fontWeight: '600' },
+                (theme) => ({ '&:hover': { color: 'primary.main' } }),
+              ]}
+              onClick={() => setNavOpen(false)}
+            >
+              <Typography variant='body1'>{section}</Typography>
+            </Link>
+          ))}
+          {/* THEME SWITCHER HERE ============ */}
+          <Box className={fadeClass} style={{ transitionDelay: `500ms` }}>
+            <Switch
+              checked={isLight}
+              onChange={() => setTheme((state) => !state)}
+              inputProps={{ 'aria-label': 'controlled' }}
+            />
+          </Box>
         </Box>
+
+        {/* MENU BUTTON HERE  */}
+        <Box
+          className={fadeClass}
+          style={{ transitionDelay: `200ms` }}
+          sx={{ zIndex: '15', display: 'flex', alignItems: 'center',pr:3 }}
+        >
+          <Button
+            sx={{
+              cursor: 'pointer',
+              alignItems: 'center',
+              minWidth: '0',
+              display: { xs: 'flex', md: 'none' },
+            }}
+            onClick={() => setNavOpen((x) => !x)}
+          >
+            {navOpen ? (
+              <AiOutlineClose size='1.4rem' />
+            ) : (
+              <FaBars size='1.4rem' />
+            )}
+          </Button>
+        </Box>
+      {/* BLUR BG HERE */}
+      <Box
+        className='blurbg'
+        onClick={() => setNavOpen(false)}
+        sx={[
+          {
+            pointerEvents:`${navOpen?'all':'none'}`,
+            transition:'all 500ms ease-in-out',
+            width: '100%',
+            bottom: '0',
+            top: '0',
+            position: 'fixed',
+            zIndex: '5',
+              backdropFilter: `${navOpen?'blur(3px)':'blur(0px)'}`,
+              // bgcolor:'red'
+          },
+         
+        ]}
+      ></Box>
       </Box>
 
-      <Box
-        className={fadeClass}
-        style={{ transitionDelay: `200ms` }}
-        sx={{ zIndex: '5', display: 'flex', alignItems: 'center' }}
-      >
-        <Button
-          sx={{
-            cursor: 'pointer',
-            alignItems: 'center',
-            minWidth: '0',
-            display: { xs: 'flex', md: 'none' },
-          }}
-          onClick={() => setNavOpen((x) => !x)}
-        >
-          {navOpen ? (
-            <AiOutlineClose size='1.4rem' />
-          ) : (
-            <FaBars size='1.4rem' />
-          )}
-        </Button>
-      </Box>
-    </Box>
+    </>
   )
 }
 

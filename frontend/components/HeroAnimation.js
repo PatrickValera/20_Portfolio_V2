@@ -56,7 +56,6 @@ const HeroAnimation = () => {
           maxWidth: '350px',
           height: 'min-content',
           overflowY: 'hidden',
-          gap:2,
         //   border: '1px solid blue',
         }}
       >
@@ -64,7 +63,7 @@ const HeroAnimation = () => {
           <Box
             key={index}
             sx={[
-              { px: '12px', display: 'flex', width: '15%' },
+              { p: '12px', display: 'flex', width: '20%' },
               { '&:hover': { color: 'primary.main' } },
             ]}
           >
