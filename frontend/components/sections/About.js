@@ -66,27 +66,15 @@ const About = () => {
             sx={{ pl: 1, flexWrap: 'wrap', gap: 1, justifyContent: 'left' }}
           >
             <Item>TypeScript</Item>
-            <Item>Redis</Item>
-            <Item>GraphQL</Item>
-            <Item>Rust</Item>
+            <Item>Algorithms</Item>
+            <Item>AWS</Item>
           </Stack>
         </Fade>
       </Box>
       {/* END OF ABOUT ME PARAGRAPHS HERE ========== */}
       {/* FILE SYSTEM ============================== */}
-      <Box sx={{ display: 'block', flex: '300px 1 1' }}>
-        <Fade
-          sx={{
-            border: '2px solid',
-            borderColor: 'text.primary',
-            // height: '400px',
-            p: 1,
-            // FOR ANIMATION
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
+      <Box sx={{ flex: '300px 1 1'}}>
+        <Fade>
           {/* <Folder setPath={setPath} path={path} name='/'>
                         <Folder setPath={setPath} path={path} name='/Photos'>
                             <Folder setPath={setPath} path={path} name='/Photos/me'>

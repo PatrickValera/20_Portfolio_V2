@@ -22,7 +22,7 @@ export const SocialsNav = ({ socials }) => {
         flexDirection: 'column',
         position: 'fixed !important',
         bottom: '0',
-        left: '1.1rem',
+        left: '1.3rem',
         alignItems: 'center',
       }}
     >

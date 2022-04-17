@@ -147,6 +147,7 @@ img {
 .proj-image {
   -webkit-filter: grayscale(90%); /* Safari 6.0 - 9.0 */
   filter: grayscale(90%);
+  object-fit: cover;
 }
 .proj-image:hover{
   -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */

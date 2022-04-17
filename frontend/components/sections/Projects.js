@@ -15,7 +15,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const Projects = ({ projects }) => {
   return (
     <Box id='projects' sx={{px:{xs:0,md:'50px'}}}>
-
+       {/* PROJ SECTION HEADER HERE */}
       <Fade>
         <Box display='flex' sx={{  mb: 3, alignItems: 'center' }}>
           <Typography variant='h5' sx={{}}>Project Highlights</Typography>
@@ -26,8 +26,8 @@ const Projects = ({ projects }) => {
       {projects.slice(0, 3).map((project, index) => (
         <Fade key={index} sx={{ display: 'grid', gridTemplateColumns: 'repeat(12,1fr)', position: 'relative', mb: 3 }}>
           {/* HIGHLIGHT PROJECT IMAGE HERE */}
-          <Box sx={{ gridArea: { xs: '1/1/-1/13', md: '1/1/-1/8',border:'2px solid ', }}}>
-            <Box sx={{ height:'100%',borderColor:'text.primary',display:'flex',alignItems:'center',filter:{xs:'blur(1px)',md:'unset'}}}>
+          <Box sx={{ gridArea: { xs: '1/1/-1/13', md: '1/1/-1/8' }}}>
+            <Box sx={{ height:'100%',borderColor:'text.primary',display:'flex',alignItems:'stretch',filter:{xs:'blur(1px)',md:'unset'}}}>
               <IKContext urlEndpoint="https://ik.imagekit.io/oqrgl5cil3a">
                 <IKImage
                   path={`/${project.title.toLowerCase()}.png`}
@@ -38,9 +38,12 @@ const Projects = ({ projects }) => {
             </Box>
           </Box>
           {/* HIGHLIGHT PROJECT DESCRIPTION HERE */}
-          <Box sx={{ p: 2, gridArea: { xs: '1/1/-1/13', md: '1/6/-1/-1' }, display: 'flex', flexDirection: 'column', textAlign: {xs:'left',md:'right'},alignItems:{xs:'center',md:'flex-end'}, justifyContent: 'center',bgcolor:{xs:'rgba(255,255,255,.8)',md:'unset'},zIndex:'5', }}>
-            <Typography variant='h6'sx={{color:{xs:'#111',md:'text.primary'}}} >{project.title}</Typography>
-            <Typography variant='body1' sx={{ bgcolor: 'text.primary', color: 'background.paper', p: {xs:1,md:3}, mb: 1, border:'2px solid',borderColor:'paper.primary',maxWidth:{xs:'350px',md:'700px'} }}>{project.description}
+          <Box sx={{ p: 2, gridArea: { xs: '1/1/-1/13', md: '1/6/-1/-1' }, display: 'flex', flexDirection: 'column', pointerEvents:'none',textAlign: {xs:'left',md:'right'},alignItems:{xs:'center',md:'flex-end'}, justifyContent: 'center',bgcolor:{xs:'rgba(255,255,255,.8)',md:'unset'},zIndex:'5' }}>
+            <Typography variant='h6'sx={{color:{xs:'#111',md:'text.primary'}}} >
+              {project.title}
+              </Typography>
+            <Typography variant='body1' sx={{ bgcolor: 'text.primary', color: 'background.paper', p: {xs:1,md:3}, mb: 1, border:'2px solid',pointerEvents:'all',borderColor:'paper.primary',maxWidth:{xs:'350px',md:'700px'} }}>
+              {project.description}
             </Typography>
             <Stack direction='row' spacing={{ xs: 1, md: 2 }} sx={{ flexWrap: 'wrap', color: 'blue', justifyContent: 'center', mb: 1 }}>
               {project.stack.map((tool, index) => {
@@ -57,7 +60,6 @@ const Projects = ({ projects }) => {
             
             {/* <Icon site={'github'} ===============================/> */}
           </Box>
-
         </Fade>
       ))}
 
