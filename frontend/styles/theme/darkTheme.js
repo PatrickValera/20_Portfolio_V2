@@ -9,9 +9,9 @@ let darkTheme=createTheme({
 darkTheme = createTheme({
   palette: {
     mode: 'dark',
-    // primary:{
-    //   ...darkTheme.palette.primary,light:'#232323'
-    // }
+    primary:{
+      ...darkTheme.palette.primary,light:'rgb(244,124,1)'
+    },
     background:{
       nav:'#232323'
     }

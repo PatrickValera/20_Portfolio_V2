@@ -54,7 +54,8 @@ const Introduction = () => {
         <Typography
           variant='body1'
           fontSize='.75rem'
-          sx={{ width: '100%', maxWidth: '550px', mb: 2 }}
+          color='text.primary'
+          sx={{ width: '100%', maxWidth: '550px', mb: 2}}
           gutterBottom
         >
           {`I am a Computer Science student and a web developer. I aim to deepen my understanding of various technologies and build exceptional products.`}
