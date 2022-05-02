@@ -16,15 +16,15 @@ const Item = styled(Paper)(({ theme }) => ({
 const Projects = ({ projects }) => {
   return (
     <Box id='projects' sx={{ px: { xs: 0, md: '50px' } }}>
-      {/* PROJ SECTION HEADER HERE */}
+      {/* HIGHLIGHT PROJECT HEADER START HERE */}
       <Fade>
-        <Box display='flex' sx={{ mb: 3, alignItems: 'center' }}>
+        <Box display='flex' sx={{ mb: 3, alignItems: 'flex-end' }}>
           <Typography variant='h5' sx={{}}>
             Project Highlights
           </Typography>
+          <Button variant='text' size='small' href='/projects' sx={{ml:1,py:0}}>View All</Button>
         </Box>
       </Fade>
-
       {/* HIGHLIGHT PROJECTS START HERE */}
       {projects.slice(0, 3).map((project, index) => (
         <Fade
@@ -33,12 +33,14 @@ const Projects = ({ projects }) => {
             display: 'grid',
             gridTemplateColumns: 'repeat(12,1fr)',
             position: 'relative',
-            mb: 3,
-            border:{xs:'1px solid black',md:'unset'}
+            mb: 4,
+            border:{xs:'1px solid black',md:'unset'},
+            // pointerEvents:'none',
+            zIndex:4
           }}
         >
           {/* HIGHLIGHT PROJECT IMAGE HERE */}
-          <Box sx={{ gridArea: { xs: '1/1/-1/13', md: '1/1/-1/8' } }}>
+          <Box sx={{ gridArea: { xs: '1/1/-1/13', md: `${index%2==0?'1/1/-1/8':'1/6/-1/-1'}`, } }}>
             <Box
               sx={{
                 height: '100%',
@@ -61,15 +63,15 @@ const Projects = ({ projects }) => {
           <Box
             sx={{
               p: 2,
-              gridArea: { xs: '1/1/-1/13', md: '1/6/-1/-1' },
+              gridArea: { xs: '1/1/-1/13', md:`${index%2==0?'1/6/-1/-1':'1/1/-1/8'}` },
               display: 'flex',
               flexDirection: 'column',
               pointerEvents: 'none',
-              textAlign: { xs: 'left', md: 'right' },
-              alignItems: { xs: 'center', md: 'flex-end' },
+              textAlign: { xs: 'left', md: `${index%2==0?'right':'left'}` },
+              alignItems: { xs: 'center', md: `${index%2==0?'flex-end':'flex-start'}` },
               justifyContent: 'center',
               bgcolor: { xs: 'rgba(255,255,255,.8)', md: 'unset' },
-              zIndex: '5',
+              zIndex:5
             }}
           >
             <Typography
@@ -121,19 +123,21 @@ const Projects = ({ projects }) => {
                 )
               })}
             </Stack>
-            <Link color='primary.dark' href={project.link}>
-              <FiExternalLink />
-            </Link>
+            <Button variant='contained' color='primary' href={project.link} sx={{pointerEvents:'all',gap:1}}>
+              Live<FiExternalLink />
+            </Button>
 
             {/* <Icon site={'github'} ===============================/> */}
           </Box>
         </Fade>
       ))}
 
-      <Fade>
-        <Typography variant='h5' textAlign='center' sx={{ mt: '10vh', mb: 4 }}>
+      {/* OTHER PROJECT HEADER START HERE */}
+      <Fade sx={{alignItems:'center',display:'flex',flexDirection:'column'}}>
+        <Typography variant='h5'sx={{ mt: '10vh', mb: 1}}>
           Other Projects
         </Typography>
+        <Button variant='text' size='small' href='/projects' textAlign='center' sx={{ml:1,mb:2,py:0,textDecoration:'underline'}}>View All</Button>
       </Fade>
       {/* OTHER PROJECT START HERE */}
       <Box

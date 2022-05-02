@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
       })
     },{
       threshold:0,
-      rootMargin:'-35% 0% -35% 0%',
+      rootMargin:'-25% 0% -25% 0%',
     })
 
     items.forEach(item => {

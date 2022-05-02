@@ -22,7 +22,8 @@ const About = () => {
     <Box
       id='about'
       sx={{
-        display: 'flex',
+        // display: 'flex',
+        display:'none',
         mb: '20vh',
         flexWrap: 'wrap',
         gap: 2,

@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material/styles';
-import { FaDharmachakra } from 'react-icons/fa';
 
 let darkTheme=createTheme({
   palette:{
@@ -10,7 +9,9 @@ darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary:{
-      ...darkTheme.palette.primary,light:'rgb(244,124,1)'
+      // ...darkTheme.palette.primary,light:'red'
+      dark:'rgba(130,190,255,.9)',
+      main:'rgba(130,190,255,.95)'
     },
     background:{
       nav:'#232323'

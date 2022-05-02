@@ -42,7 +42,7 @@ export const SocialsNav = ({ socials }) => {
 
 const Icon = ({ site, label, link }) => {
   let icon = useRef(null)
-  let props = { size: '1.2rem', className: '' }
+  let props = { size: '1.45rem', className: '' }
   switch (site) {
     case 'github': {
       icon.current = <RiGithubFill {...props} />

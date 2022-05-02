@@ -7,7 +7,7 @@ export default class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     <title>
-                        Patrick Valera: Portfolio
+                        Patrick Valera
                     </title>
                     <meta name='description' content="Web development portfolio for Patrick Valera 2022.">
                         
@@ -16,7 +16,6 @@ export default class MyDocument extends Document {
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
                     />
-
                 </Head>
                 <body>
                     <Main />

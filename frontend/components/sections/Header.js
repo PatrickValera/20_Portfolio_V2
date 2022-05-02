@@ -87,7 +87,7 @@ const Header = ({ isLight, setTheme }) => {
               className={fadeClass}
               underline='none'
               key={index}
-              href={`#${section.toLowerCase()}`}
+              href={`/#${section.toLowerCase()}`}
               style={{ transitionDelay: `${(index + 2) * 100}ms` }}
               sx={[
                 { color: 'text.primary', fontWeight: '600' },
