@@ -1,17 +1,16 @@
 import { Container, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, Paper, Box, Button } from '@mui/material'
 import React, { useState } from 'react'
 import Profile from '../public/patrick.json'
-import { darken } from '@mui/material'
 import { IKContext, IKImage } from 'imagekitio-react'
-const projects = () => {
+const Projects = () => {
     const [focusedProj, setFocusedProj] = useState({})
     const { projects } = Profile
     return (
         <Container component='main' maxWidth='xl' sx={{ p: { xs: 2, sm: 3, md: '65px' } }}>
             <Typography variant='h3'>PROJECTS</Typography>
-            <Box display='flex' sx={{ gap: 2, alignItems: 'flex-start' }}>
+            <Box display='flex' sx={{ gap: 2, alignItems: 'flex-start',justifyContent:'center', flexWrap: 'wrap' }}>
 
-                <TableContainer component={Paper} sx={{ flex: '400px 1 1' }}>
+                <TableContainer component={Paper} sx={{ flex: '400px 1 1', order: { xs: 1, md: 0 } }}>
                     <Table>
                         <TableHead>
                             <TableRow>
@@ -34,19 +33,19 @@ const projects = () => {
 
                     </Table>
                 </TableContainer>
-                <Paper sx={{ flex: '300px 0 1', p: 2 }}>
+                <Paper sx={{ flex: '300px 0 1', p: 2, order: { xs: 0, md:1  } }}>
                     <Box
                         sx={{
                             height: '100%',
                             border: { xs: 'unset', md: '1px solid #232323' },
                             display: 'flex',
                             alignItems: 'stretch',
-                            aspectRatio:'16/9'
+                            aspectRatio: '16/9'
                             // filter: { xs: 'blur(1px)', md: 'unset' },
                         }}
                     >
                         <IKContext urlEndpoint='https://ik.imagekit.io/oqrgl5cil3a'>
-                            {focusedProj.title&&<IKImage
+                            {focusedProj.title && <IKImage
                                 path={`/${focusedProj.title.toLowerCase()}.png`}
                                 // className='proj-image'
                                 transformation={[{ quality: 10 }]}
@@ -65,4 +64,4 @@ const projects = () => {
     )
 }
 
-export default projects
+export default Projects

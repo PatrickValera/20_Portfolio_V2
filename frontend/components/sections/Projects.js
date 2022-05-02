@@ -22,7 +22,7 @@ const Projects = ({ projects }) => {
           <Typography variant='h5' sx={{}}>
             Project Highlights
           </Typography>
-          <Button variant='text' size='small' href='/projects' sx={{ml:1,py:0}}>View All</Button>
+          <Button variant='text' size='small' href='/projects' sx={{ ml: 1, py: 0 }}>View All</Button>
         </Box>
       </Fade>
       {/* HIGHLIGHT PROJECTS START HERE */}
@@ -34,17 +34,17 @@ const Projects = ({ projects }) => {
             gridTemplateColumns: 'repeat(12,1fr)',
             position: 'relative',
             mb: 4,
-            border:{xs:'1px solid black',md:'unset'},
+            border: { xs: '1px solid black', md: 'unset' },
             // pointerEvents:'none',
-            zIndex:4
+            zIndex: 4
           }}
         >
           {/* HIGHLIGHT PROJECT IMAGE HERE */}
-          <Box sx={{ gridArea: { xs: '1/1/-1/13', md: `${index%2==0?'1/1/-1/8':'1/6/-1/-1'}`, } }}>
+          <Box sx={{ gridArea: { xs: '1/1/-1/13', md: `${index % 2 == 0 ? '1/1/-1/8' : '1/6/-1/-1'}`, } }}>
             <Box
               sx={{
                 height: '100%',
-                border:{xs:'unset',md:'3px solid #232323'},
+                border: { xs: 'unset', md: '3px solid #232323' },
                 display: 'flex',
                 alignItems: 'stretch',
                 filter: { xs: 'blur(1px)', md: 'unset' },
@@ -63,15 +63,15 @@ const Projects = ({ projects }) => {
           <Box
             sx={{
               p: 2,
-              gridArea: { xs: '1/1/-1/13', md:`${index%2==0?'1/6/-1/-1':'1/1/-1/8'}` },
+              gridArea: { xs: '1/1/-1/13', md: `${index % 2 == 0 ? '1/6/-1/-1' : '1/1/-1/8'}` },
               display: 'flex',
               flexDirection: 'column',
               pointerEvents: 'none',
-              textAlign: { xs: 'left', md: `${index%2==0?'right':'left'}` },
-              alignItems: { xs: 'center', md: `${index%2==0?'flex-end':'flex-start'}` },
+              textAlign: { xs: 'left', md: `${index % 2 == 0 ? 'right' : 'left'}` },
+              alignItems: { xs: 'center', md: `${index % 2 == 0 ? 'flex-end' : 'flex-start'}` },
               justifyContent: 'center',
               bgcolor: { xs: 'rgba(255,255,255,.8)', md: 'unset' },
-              zIndex:5
+              zIndex: 5
             }}
           >
             <Typography
@@ -123,7 +123,7 @@ const Projects = ({ projects }) => {
                 )
               })}
             </Stack>
-            <Button variant='contained' color='primary' href={project.link} sx={{pointerEvents:'all',gap:1}}>
+            <Button variant='contained' color='primary' href={project.link} sx={{ pointerEvents: 'all', gap: 1 }}>
               Live<FiExternalLink />
             </Button>
 
@@ -133,11 +133,11 @@ const Projects = ({ projects }) => {
       ))}
 
       {/* OTHER PROJECT HEADER START HERE */}
-      <Fade sx={{alignItems:'center',display:'flex',flexDirection:'column'}}>
-        <Typography variant='h5'sx={{ mt: '10vh', mb: 1}}>
+      <Fade sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
+        <Typography variant='h5' sx={{ mt: '10vh', mb: 1 }}>
           Other Projects
         </Typography>
-        <Button variant='text' size='small' href='/projects' textAlign='center' sx={{ml:1,mb:2,py:0,textDecoration:'underline'}}>View All</Button>
+        <Button variant='text' size='small' href='/projects' textAlign='center' sx={{ ml: 1, mb: 2, py: 0, textDecoration: 'underline' }}>View All</Button>
       </Fade>
       {/* OTHER PROJECT START HERE */}
       <Box
@@ -145,88 +145,92 @@ const Projects = ({ projects }) => {
         sx={{ flexWrap: 'wrap', gap: 2, mb: 3, px: { xs: 1, md: 3 } }}
       >
         {projects.slice(3, 9).map((project, index) => {
-          let num=index
-          while (num>2){
-            num-=3
+          let num = index
+          while (num > 2) {
+            num -= 3
           }
-          return(
-          <Fade
-            key={index}
-            sx={{
-              transitionDelay:`${num*150}ms !important`,
-              flex: '30% 1 1',
-              minWidth: '200px',
-              minHeight: { xs: '150px', md: '200px' },
-            }}
-          >
-            <Box
-              sx={[
-                {
-                  p: 2,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  bgcolor: 'text.primary',
-                  color: 'background.paper',
-                  height: '100%',
-                  cursor: 'pointer',
-                  transition: 'all 200ms ease-out',
-                },
-                (theme) => ({
-                  '&:hover': {
-                    transform: 'translateY(-5px)',
-                    '.proj-title,.folder-close,.folder-open': {
-                      color: theme.palette.primary.light,
-                    },
-                    '.folder-close': {
-                      display: 'none',
-                    },
-                    '.folder-open': {
-                      display: 'block',
-                    },
-                  },
-                }),
-              ]}
+          return (
+            <Fade
+              key={index}
+              sx={{
+                transitionDelay: `${num * 150}ms !important`,
+                flex: '30% 1 1',
+                minWidth: '160px',
+                minHeight: { xs: '150px', md: '200px' },
+              }}
             >
-              <Box>
-                <Typography
-                  className='proj-title'
-                  variant='h6'
-                  gutterBottom
-                  sx={{ float: 'left' }}
-                >
-                  {project.title}
+              <Box
+                sx={[
+                  {
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    bgcolor: 'text.primary',
+                    color: 'background.paper',
+                    height: '100%',
+                    cursor: 'pointer',
+                    transition: 'all 200ms ease-out',
+                  },
+                  (theme) => ({
+                    '&:hover': {
+                      transform: 'translateY(-5px)',
+                      '.proj-title,.folder-close,.folder-open': {
+                        color: theme.palette.primary.light,
+                      },
+                      '.folder-close': {
+                        display: 'none',
+                      },
+                      '.folder-open': {
+                        display: 'block',
+                      },
+                    },
+                  }),
+                ]}
+              >
+                <Box display='flex'>
+                  <Typography
+                    className='proj-title'
+                    variant='h6'
+                    sx={{ flex: 'min-content 1 1', whiteSpace: 'wrap', inlineSize: '100%' }}
+                    gutterBottom
+                  >
+                    {project.title}
+                  </Typography>
+                  <Box
+                    className='folder-open'
+                    sx={{
+                      flex: 'auto 0 1',
+                      bgcolor: 'red',
+                      height: '0',
+                      display: 'none'
+                    }}
+                  >
+                    <AiTwotoneFolderOpen style={{ fontSize: '1.8rem' }} />
+                  </Box>
+                  <Box
+                    className='folder-close'
+                    sx={{
+                      float: 'right',
+                      bgcolor: 'red',
+                      height: '0',
+                      display: 'block'
+
+                    }}
+                  >
+                    <AiOutlineFolder style={{ fontSize: '1.8rem' }} />
+                  </Box>
+                </Box>
+                <Typography variant='body1' sx={{ flexGrow: '1', mt: 2,mb:2 }}>
+                  {project.description}
                 </Typography>
-                <Box
-                  className='folder-open'
-                  sx={{
-                    float: 'right',
-                    bgcolor: 'red',
-                    height: '0',
-                    display: 'none'
-                  }}
-                >
-                  <AiTwotoneFolderOpen style={{ fontSize: '1.8rem' }} />
-                </Box>
-                <Box
-                  className='folder-close'
-                  sx={{
-                    float: 'right',
-                    bgcolor: 'red',
-                    height: '0',
-                    display:'block'
-                 
-                  }}
-                >
-                  <AiOutlineFolder style={{ fontSize: '1.8rem' }} />
-                </Box>
+                <Button variant='contained' color='primary' href={project.link} sx={{ pointerEvents: 'all', gap: 1 }}>
+                  Live<FiExternalLink />
+                </Button>
+                {/* <Icon site={'github'} sx={{ alignSelf: 'flex-end' }} />======================= */}
               </Box>
-              <Typography variant='body1' sx={{ flexGrow: '1', mt: 2 }}>
-                {project.description}
-              </Typography>
-              {/* <Icon site={'github'} sx={{ alignSelf: 'flex-end' }} />======================= */}
-            </Box>
-          </Fade>
-        )})}
+            </Fade>
+          )
+        })}
       </Box>
     </Box>
   )
