@@ -1,20 +1,31 @@
 import { createTheme } from '@mui/material/styles';
 
-let darkTheme=createTheme({
-  palette:{
-    mode:'dark'
+let darkTheme = createTheme({
+  palette: {
+    mode: 'dark'
   }
 })
 darkTheme = createTheme({
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundColor: '#121212'
+        }
+      }
+    }
+  },
   palette: {
     mode: 'dark',
-    primary:{
-      // ...darkTheme.palette.primary,light:'red'
-      dark:'rgba(130,190,255,.9)',
-      main:'rgba(130,190,255,.95)'
+    primary: {
+      dark: 'rgb(255, 167, 38)',
+      main: 'rgba(130,190,255,.95)'
     },
-    background:{
-      nav:'#232323'
+    background: {
+      header: '#121212',
+      nav: '#232323',
+      paper: '#1d1d1f',
+      paperContrast: '#eee',
     }
   },
   typography: {

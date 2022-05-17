@@ -5,7 +5,10 @@ lightTheme = createTheme({
   palette: {
     mode: 'light',
     background:{
-      nav:'rgb(120, 215, 255)'
+      header:'#fff',
+      nav:'rgb(120, 215, 255)',
+      paper:'#f5f5f5',
+      paperContrast:'#131313'
     }
   },
   typography: {

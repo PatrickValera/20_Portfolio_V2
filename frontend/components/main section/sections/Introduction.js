@@ -1,7 +1,7 @@
 import { Button, Link, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { Box } from '@mui/material'
-import HeroAnimation from '../HeroAnimation'
+// import HeroAnimation from '../../HeroAnimation'
 import { BiRightArrowAlt } from 'react-icons/bi'
 const Introduction = () => {
   const [fadeClass, setFadeClass] = useState('intro-fade')

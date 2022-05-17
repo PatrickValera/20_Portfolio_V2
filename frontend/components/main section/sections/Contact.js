@@ -1,6 +1,6 @@
 import { Box, Button, Link, Typography } from '@mui/material'
 import React from 'react'
-import Fade from '../Fade'
+import Fade from '../../utils/components/Fade'
 import { FiSend } from 'react-icons/fi'
 const Contact = () => {
   return (

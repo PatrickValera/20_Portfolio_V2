@@ -45,12 +45,12 @@ const Header = ({ isLight, setTheme }) => {
           alignItems: 'center',
           width: '100%',
           transition: 'all 300ms ease-in-out',
-          backgroundColor: 'background.paper',
+          backgroundColor: 'background.header',
         }}
       >
         <Typography
           variant='h5'
-          sx={{ flexGrow: '1',pl:3 }}
+          sx={{ flexGrow: '1', pl: 3 }}
           className={fadeClass}
           style={{ transitionDelay: `0` }}
         >
@@ -72,7 +72,7 @@ const Header = ({ isLight, setTheme }) => {
             top: '0',
             justifyContent: 'center',
             alignItems: 'center',
-            bgcolor: {xs:'background.nav',md:'unset'},
+            bgcolor: { xs: 'background.nav', md: 'unset' },
             width: { xs: '60vw', md: 'unset' },
             height: { xs: '100vh', md: 'unset' },
             right: { xs: `${navOpen ? '0' : '-70vw'}`, md: 'unset' },
@@ -82,7 +82,7 @@ const Header = ({ isLight, setTheme }) => {
             // borderColor: 'red'
           }}
         >
-          {['ABOUT', 'SKILLS', 'PROJECTS', 'CONTACT'].map((section, index) => (
+          {[ 'PROJECTS', 'CONTACT'].map((section, index) => (
             <Link
               className={fadeClass}
               underline='none'
@@ -91,7 +91,7 @@ const Header = ({ isLight, setTheme }) => {
               style={{ transitionDelay: `${(index + 2) * 100}ms` }}
               sx={[
                 { color: 'text.primary', fontWeight: '600' },
-                (theme) => ({ '&:hover': { color: 'primary.main' } }),
+                (theme) => ({ '&:hover': { color: 'primary.main'} }),
               ]}
               onClick={() => setNavOpen(false)}
             >
@@ -112,7 +112,7 @@ const Header = ({ isLight, setTheme }) => {
         <Box
           className={fadeClass}
           style={{ transitionDelay: `200ms` }}
-          sx={{ zIndex: '15', display: 'flex', alignItems: 'center',pr:3 }}
+          sx={{ zIndex: '15', display: 'flex', alignItems: 'center', pr: 3 }}
         >
           <Button
             sx={{
@@ -130,25 +130,27 @@ const Header = ({ isLight, setTheme }) => {
             )}
           </Button>
         </Box>
-      {/* BLUR BG HERE */}
-      <Box
-        className='blurbg'
-        onClick={() => setNavOpen(false)}
-        sx={[
-          {
-            pointerEvents:`${navOpen?'all':'none'}`,
-            transition:'all 500ms ease-in-out',
-            width: '100%',
-            bottom: '0',
-            top: '0',
-            position: 'fixed',
-            zIndex: '5',
-              backdropFilter: `${navOpen?'blur(3px)':'blur(0px)'}`,
+        {/* BLUR BG HERE */}
+        <Box
+          className='blurbg'
+          onClick={() => setNavOpen(false)}
+          sx={[
+            {
+              pointerEvents: `${navOpen ? 'all' : 'none'}`,
+              transition: 'all 500ms ease-in-out',
+              width: '100%',
+              bottom: '0',
+              top: '0',
+              position: 'fixed',
+              zIndex: '5',
+              backdropFilter: `${navOpen ? 'blur(3px)' : 'blur(0px)'}`,
               // bgcolor:'red'
-          },
-         
-        ]}
-      ></Box>
+            },
+
+          ]}
+        >
+
+        </Box>
       </Box>
 
     </>

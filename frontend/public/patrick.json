@@ -58,11 +58,11 @@
         "date":"2021"
     },{
         "id":5,
-        "title":"Recipe Finder",
-        "description":"Connects to a third party API to search for food recipes based on the user's input",
-        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
-        "link":"https://recipefinderpatrick.herokuapp.com/",
-        "date":"2021"
+        "title":"Fun with AI",
+        "description":"Have an AI respond to prompts. Requests are processed by OpenAI's gtp-3 AI model",
+        "stack":["React","CSS/SASS","Next JS","API"],
+        "link":"https://22-shopify-intern-challenge.vercel.app/",
+        "date":"2022"
     },{
         "id":8,
         "title":"Portfolio V1",
@@ -91,6 +91,13 @@
         "stack":["Python, BeautifulSoup"],
         "link":"https://portfoliopv0715.vercel.app/",
         "date":"2022"
+    },{
+        "id":13,
+        "title":"Recipe Finder",
+        "description":"Connects to a third party API to search for food recipes based on the user's input",
+        "stack":["React","NodeJS","CSS/SASS","Socket IO","Redux"],
+        "link":"https://recipefinderpatrick.herokuapp.com/",
+        "date":"2021"
     },{
         "id":12,
         "title":"Twitter Clone",

@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import Fade from '../Fade'
+import Fade from '../../utils/components/Fade'
 import { Box, Typography, Stack, Paper } from '@mui/material'
 import { styled } from '@mui/material/styles'
-import Folder from '../file-system/Folder'
-import Gallery from '../Gallery'
-import Text from '../file-system/Text'
+
 import HeroAnimation from '../HeroAnimation'
 
 const Item = styled(Paper)(({ theme }) => ({

@@ -1,10 +1,13 @@
-import { Box, Typography, Paper, Stack, Button, Link } from '@mui/material'
+import { Box, Typography, Paper, Stack, Button } from '@mui/material'
 import React, { useState } from 'react'
-import Fade from '../Fade'
+import Fade from '../../utils/components/Fade'
+
 import { styled } from '@mui/material/styles'
 import { IKImage, IKContext } from 'imagekitio-react'
 import { FiExternalLink } from 'react-icons/fi'
 import { AiOutlineFolder, AiTwotoneFolderOpen } from 'react-icons/ai'
+import Link from 'next/link'
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#eeeee',
   // ...theme.typography.body2,
@@ -22,7 +25,10 @@ const Projects = ({ projects }) => {
           <Typography variant='h5' sx={{}}>
             Project Highlights
           </Typography>
-          <Button variant='text' size='small' href='/projects' sx={{ ml: 1, py: 0 }}>View All</Button>
+          <Link href='/projects'>
+            <Button variant='text' size='small' sx={{ ml: 1, py: 0 }}>View All</Button>
+
+          </Link>
         </Box>
       </Fade>
       {/* HIGHLIGHT PROJECTS START HERE */}
@@ -70,7 +76,7 @@ const Projects = ({ projects }) => {
               textAlign: { xs: 'left', md: `${index % 2 == 0 ? 'right' : 'left'}` },
               alignItems: { xs: 'center', md: `${index % 2 == 0 ? 'flex-end' : 'flex-start'}` },
               justifyContent: 'center',
-              bgcolor: { xs: 'rgba(255,255,255,.8)', md: 'unset' },
+              // bgcolor: { xs: 'rgba(255,255,255,.8)', md: 'unset' },
               zIndex: 5
             }}
           >
@@ -83,13 +89,13 @@ const Projects = ({ projects }) => {
             <Typography
               variant='body1'
               sx={{
-                bgcolor: 'text.primary',
-                color: 'background.paper',
+                bgcolor: 'background.paper',
+                color: 'background.paperContrast',
                 p: { xs: 1, md: 3 },
                 mb: 1,
                 border: '2px solid',
                 pointerEvents: 'all',
-                borderColor: 'paper.primary',
+                borderColor: 'background.paperContrast',
                 maxWidth: { xs: '350px', md: '700px' },
               }}
             >
@@ -137,7 +143,7 @@ const Projects = ({ projects }) => {
         <Typography variant='h5' sx={{ mt: '10vh', mb: 1 }}>
           Other Projects
         </Typography>
-        <Button variant='text' size='small' href='/projects' textAlign='center' sx={{ ml: 1, mb: 2, py: 0, textDecoration: 'underline' }}>View All</Button>
+        <Button variant='text' size='small' href='/projects' sx={{ ml: 1, mb: 2, py: 0, textDecoration: 'underline' }}>View All</Button>
       </Fade>
       {/* OTHER PROJECT START HERE */}
       <Box
@@ -166,7 +172,8 @@ const Projects = ({ projects }) => {
                     display: 'flex',
                     flexDirection: 'column',
                     bgcolor: 'text.primary',
-                    color: 'background.paper',
+                    color: 'background.paperContrast',
+                    bgcolor: 'background.paper',
                     height: '100%',
                     cursor: 'pointer',
                     transition: 'all 200ms ease-out',
@@ -202,7 +209,8 @@ const Projects = ({ projects }) => {
                       flex: 'auto 0 1',
                       bgcolor: 'red',
                       height: '0',
-                      display: 'none'
+                      display: 'none',
+                      color: 'primary.main'
                     }}
                   >
                     <AiTwotoneFolderOpen style={{ fontSize: '1.8rem' }} />
@@ -213,26 +221,27 @@ const Projects = ({ projects }) => {
                       float: 'right',
                       bgcolor: 'red',
                       height: '0',
-                      display: 'block'
+                      display: 'block',
+                      color: 'primary.main'
 
                     }}
                   >
                     <AiOutlineFolder style={{ fontSize: '1.8rem' }} />
                   </Box>
                 </Box>
-                <Typography variant='body1' sx={{ flexGrow: '1', mt: 2,mb:2 }}>
+                <Typography variant='body1' sx={{ flexGrow: '1', mt: 2, mb: 2 }}>
                   {project.description}
                 </Typography>
-                <Button variant='contained' color='primary' href={project.link} sx={{ pointerEvents: 'all', gap: 1 }}>
-                  Live<FiExternalLink />
-                </Button>
-                {/* <Icon site={'github'} sx={{ alignSelf: 'flex-end' }} />======================= */}
-              </Box>
+                <Button variant='outlined' color='primary' href={project.link} sx={[{ pointerEvents: 'all', gap: 1 }, {'&:hover':{bgcolor:'primary.main',color:'primary.contrastText'}}]}>
+                Live<FiExternalLink />
+              </Button>
+              {/* <Icon site={'github'} sx={{ alignSelf: 'flex-end' }} />======================= */}
+            </Box>
             </Fade>
-          )
+      )
         })}
-      </Box>
     </Box>
+    </Box >
   )
 }
 

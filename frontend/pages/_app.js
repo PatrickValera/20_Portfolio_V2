@@ -3,11 +3,10 @@ import lightTheme from '../styles/theme/lightTheme'
 import darkTheme from '../styles/theme/darkTheme'
 import { ThemeProvider, CssBaseline } from '@mui/material'
 import { useEffect, useState } from 'react'
-import Header from '../components/sections/Header'
 
 
 function MyApp({ Component, pageProps }) {
-  const [isLightTheme,setLightTheme]=useState(false)
+  const [isLightTheme,setLightTheme]=useState(true)
   useEffect(() => {
     const items = document.querySelectorAll(".fade")
     const observer = new IntersectionObserver(entries => {
@@ -29,8 +28,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={isLightTheme?lightTheme:darkTheme}>
       <CssBaseline />
-      <Header setTheme={setLightTheme} />
-      <Component {...pageProps} />
+      <Component {...pageProps} setTheme={setLightTheme} />
     </ThemeProvider>
   )
 }
