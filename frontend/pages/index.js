@@ -8,11 +8,11 @@ import Main from '../components/Main'
 import Footer from '../components/Footer'
 
 
-export default function Home({ setTheme }) {
+export default function Home({ isLightTheme, setTheme }) {
   return (
     <>
       {/* HEADER || MAIN || FOOTER */}
-      <Header setTheme={setTheme} />
+      <Header isLightTheme={isLightTheme} setTheme={setTheme} />
       <Main profile={Profile} />
       <Footer />
     </>

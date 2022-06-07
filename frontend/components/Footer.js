@@ -11,11 +11,11 @@ const Footer = () => {
         Built by Patrick Valera 2022 <br/>
         with NextJS <br/>
       </Typography>
-      <Typography color='warning.dark'
+      {/* <Typography color='warning.dark'
        sx={{position:'fixed',bottom:'1rem',right:'1rem'}}
       >
         In development
-      </Typography>
+      </Typography> */}
 
     </Box>
   )

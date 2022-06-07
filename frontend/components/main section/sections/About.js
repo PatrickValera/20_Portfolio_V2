@@ -3,7 +3,6 @@ import Fade from '../../utils/components/Fade'
 import { Box, Typography, Stack, Paper } from '@mui/material'
 import { styled } from '@mui/material/styles'
 
-import HeroAnimation from '../HeroAnimation'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#eeeee',
@@ -71,29 +70,7 @@ const About = () => {
         </Fade>
       </Box>
       {/* END OF ABOUT ME PARAGRAPHS HERE ========== */}
-      {/* FILE SYSTEM ============================== */}
-      <Box sx={{ flex: '300px 1 1'}}>
-        <Fade>
-          {/* <Folder setPath={setPath} path={path} name='/'>
-                        <Folder setPath={setPath} path={path} name='/Photos'>
-                            <Folder setPath={setPath} path={path} name='/Photos/me'>
-                                <Gallery />
-                            </Folder >
-                            <Folder setPath={setPath} path={path} name='/Photos/others'>
-                                <p>PICS </p>
-                            </Folder >
-                        </Folder >
-                        <Folder setPath={setPath} path={path} name='/Documents'>
-                            <Text path={path} name='/Documents/text'>DOCS</Text>
-                        </Folder>
-                        <Folder setPath={setPath} path={path} name='/Other'>
-                            <p>OTHER FILES</p>
-                        </Folder>
-                    </Folder> */}
-          <HeroAnimation />
-        </Fade>
-      </Box>
-      {/* END OF FILE SYSTEM ======================== */}
+  
     </Box>
   )
 }

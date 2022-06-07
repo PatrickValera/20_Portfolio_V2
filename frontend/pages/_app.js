@@ -6,29 +6,34 @@ import { useEffect, useState } from 'react'
 
 
 function MyApp({ Component, pageProps }) {
-  const [isLightTheme,setLightTheme]=useState(true)
+  const [isLightTheme, setLightTheme] = useState(true)
   useEffect(() => {
     const items = document.querySelectorAll(".fade")
     const observer = new IntersectionObserver(entries => {
 
       entries.forEach(entry => {
-        if(!entry.isIntersecting)return
+        if (!entry.isIntersecting) return
         else entry.target.classList.toggle('show', entry.isIntersecting)
-        if(entry.isIntersecting)observer.unobserve(entry.target)
+        if (entry.isIntersecting) observer.unobserve(entry.target)
       })
-    },{
-      threshold:0,
-      rootMargin:'-25% 0% -25% 0%',
+    }, {
+      threshold: 0,
+      rootMargin: '-25% 0% -25% 0%',
     })
 
     items.forEach(item => {
       observer.observe(item)
     })
-  },[isLightTheme])
+    return (() => {
+      items.forEach(item => {
+        item.classList.toggle('show')
+      })
+    })
+  }, [isLightTheme])
   return (
-    <ThemeProvider theme={isLightTheme?lightTheme:darkTheme}>
+    <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
       <CssBaseline />
-      <Component {...pageProps} setTheme={setLightTheme} />
+      <Component {...pageProps} isLightTheme={isLightTheme} setTheme={setLightTheme} />
     </ThemeProvider>
   )
 }

@@ -1,9 +1,65 @@
-import { Button, Link, Typography } from '@mui/material'
+import { Button, Link, Paper, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { Box } from '@mui/material'
-// import HeroAnimation from '../../HeroAnimation'
 import { BiRightArrowAlt } from 'react-icons/bi'
+import { AiOutlineHtml5 } from 'react-icons/ai'
+import { IoLogoCss3 } from 'react-icons/io'
+import { DiJavascript1, DiGit, DiHeroku } from 'react-icons/di'
+import {
+  SiDocker,
+  SiTypescript,
+  SiPython,
+  SiTailwindcss,
+  SiMongodb,
+  SiExpress,
+  SiVisualstudiocode,
+  SiNextdotjs,
+  SiRedux,
+  SiMaterialui,
+  SiVercel,
+  SiSocketdotio,
+} from 'react-icons/si'
+import { FaReact, FaNodeJs, FaSass } from 'react-icons/fa'
+
+let props = { style: { fontSize: '1.5rem' } }
+let cards = [
+  {
+    logo: <DiJavascript1 key='19' {...props} />,
+    name: 'TypeScript'
+  }, {
+    logo: <FaReact key='6' {...props} />,
+    name: 'React'
+  },
+  {
+    logo: <SiMongodb key='4' {...props} />,
+    name: 'MongoDB'
+  },
+  {
+    logo: <SiExpress key='5' {...props} />,
+    name: 'Express'
+  },
+
+  {
+    logo: <SiNextdotjs key='9' {...props} />,
+    name: 'Next'
+  },
+  {
+    logo: <SiRedux key='10' {...props} />,
+    name: 'Redux'
+  },
+  {
+    logo: <FaSass key='11' {...props} />,
+    name: 'Sass'
+  },
+  {
+    logo: <SiTailwindcss key='17' {...props} />,
+    name: 'TailWind'
+  },
+
+]
+
 const Introduction = () => {
+
   const [fadeClass, setFadeClass] = useState('intro-fade')
   useEffect(() => {
     setFadeClass('intro-fade-done')
@@ -14,8 +70,7 @@ const Introduction = () => {
       className={fadeClass}
       style={{ transitionDelay: `900ms` }}
       sx={{
-        gap: 4,
-        flexWrap: { xs: 'wrap', sm: 'nowrap' },
+        flexWrap: { xs: 'wrap', md: 'nowrap' },
         height: '100vh',
         alignItems: 'center',
         alignContent: 'center',
@@ -26,58 +81,79 @@ const Introduction = () => {
       <Box
         className='fade'
         sx={{
-          px: { xs: 2, md: 4 },
-          flex: '350px 1 1',
-          pb: '15vh',
+          flex: '0 2 600px',
+          textAlign: { xs: 'center', md: 'left' },
+          mb: 4
         }}
       >
         <Typography
-          variant='body1'
-          fontSize='.7rem'
-          color='primary.dark'
-          fontWeight='600'
+          variant='h3'
+          fontSize='2rem'
+          color='primary.light'
+          fontWeight='600'  
+          sx={{
+            fontSize: { xs: '1.2rem', sm: '1.8rem', md: '2rem'},
+          }}
         >
-          {' '}
-          Hello, my name is
+          Hey there,
         </Typography>
         <Typography
           variant='h1'
           color='primary.main'
           fontWeight='600'
           sx={{
-            fontSize: { xs: '2.4rem', sm: '3.1rem', md: '4.5rem', lg: '6rem' },
+            fontSize: { xs: '2rem', sm: '2.7rem', md: '3.7rem', lg: '5rem' },
           }}
         >
-          {' '}
-          Patrick Valera.
+          {`I'm Patrick`}
         </Typography>
         <Typography
           variant='body1'
           fontSize='.75rem'
           color='text.primary'
-          sx={{ width: '100%', maxWidth: '550px', mb: 2}}
           gutterBottom
         >
           {`I am a Computer Science student and a web developer. I aim to deepen my understanding of various technologies and build exceptional products.`}
         </Typography>
-        <Link href='/ResumePatrickValera.pdf' underline='none'>
-          <Button
-            variant='outlined'
-            endIcon={<BiRightArrowAlt />}
-            sx={{ p: '.2rem .4rem' }}
-          >
-            Resume
-          </Button>
-        </Link>
+        <Button
+          href='/#projects'
+          variant='contained'
+          size='small'
+          sx={{ mr: 1,textTransform:'none' }}
+        >
+          Projects
+        </Button>
+        <Button
+          href='/ResumePatrickValera.pdf'
+          variant='outlined'
+          endIcon={<BiRightArrowAlt />}
+          size='small'
+        >
+          Resume
+        </Button>
       </Box>
-      {/* HERO ANIMATION HERE========== */}
-      {/* <Box sx={{ flex: '300px 1 1',
-      // display:{xs:'none',sm:'block'} 
-      }}>
-        <HeroAnimation />
-      </Box> */}
+      {/* CARD HERE ===================== */}
+      <Box
+        display='flex'
+        sx={{
+          flex: '0 1 500px',
+          flexWrap: 'wrap',
+        }}
+      >
+        {cards.map(card => (
+          <Card card={card} />
+        ))}
+      </Box>
     </Box>
   )
 }
+const Card = ({ card }) => (
 
+  <Paper elevation='0' sx={{ display: 'flex', flex: '1 1 21%', m: '1%', aspectRatio: '1/1', justifyContent: 'center', alignItems: 'center', }}>
+    <Box sx={{ textAlign: 'center' }} >
+      {card.logo}
+      <Typography variant='body1'>{card.name}</Typography>
+    </Box>
+  </Paper>
+)
 export default Introduction

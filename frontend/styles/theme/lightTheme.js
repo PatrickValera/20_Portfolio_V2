@@ -46,6 +46,15 @@ lightTheme = createTheme({
       },
     },
   },
+  components:{
+    MuiButton:{
+      defaultProps:{
+        disableElevation:true,
+        disableRipple:true,
+        sx:{textTransform:'none'}
+      }
+    }
+  }
 })
 
 export default lightTheme

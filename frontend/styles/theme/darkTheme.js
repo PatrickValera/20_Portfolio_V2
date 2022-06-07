@@ -63,6 +63,14 @@ darkTheme = createTheme({
       },
     },
   },
+  components:{
+    MuiButton:{
+      defaultProps:{
+        disableElevation:true,
+        disableRipple:true
+      }
+    }
+  }
 });
 
 export default darkTheme;

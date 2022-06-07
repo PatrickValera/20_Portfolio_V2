@@ -1,9 +1,9 @@
 import { Box, Button, Link, Switch, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaMoon } from 'react-icons/fa'
 import { AiOutlineClose } from 'react-icons/ai'
-
-const Header = ({ isLight, setTheme }) => {
+import { TiWeatherSunny } from 'react-icons/ti'
+const Header = ({ isLightTheme, setTheme }) => {
   const [navOpen, setNavOpen] = useState(false)
   const [fadeClass, setFadeClass] = useState('intro-fade')
 
@@ -37,12 +37,12 @@ const Header = ({ isLight, setTheme }) => {
     <>
       <Box
         className='header'
+        component='header'
         sx={{
           zIndex: 10,
-          py: 2,
+          p: 2,
           position: 'fixed',
           display: 'flex',
-          alignItems: 'center',
           width: '100%',
           transition: 'all 300ms ease-in-out',
           backgroundColor: 'background.header',
@@ -50,7 +50,7 @@ const Header = ({ isLight, setTheme }) => {
       >
         <Typography
           variant='h5'
-          sx={{ flexGrow: '1', pl: 3 }}
+          sx={{ flexGrow: '1' }}
           className={fadeClass}
           style={{ transitionDelay: `0` }}
         >
@@ -61,9 +61,7 @@ const Header = ({ isLight, setTheme }) => {
         <Box
           component='nav'
           display='flex'
-          // className={navOpen ? 'nav-open' : 'nav-close'}
           sx={{
-            zIndex: '10',
             opacity: 0.99,
             gap: 2,
             transition: 'all 250ms ease-in-out',
@@ -76,22 +74,31 @@ const Header = ({ isLight, setTheme }) => {
             width: { xs: '60vw', md: 'unset' },
             height: { xs: '100vh', md: 'unset' },
             right: { xs: `${navOpen ? '0' : '-70vw'}`, md: 'unset' },
-            // bgcolor: { xs: 'primary.light', md: 'unset' },
-            // borderColor: 'background.paper',
-            // borderLeft: { xs: '1px solid', md: 'unset' },
-            // borderColor: 'red'
           }}
         >
-          {[ 'PROJECTS', 'CONTACT'].map((section, index) => (
+          <Box className={fadeClass} style={{ transitionDelay: `200ms` }}>
+            <Button
+              size='small'
+              variant='contained'
+              onClick={() => setTheme((state) => !state)}
+              inputProps={{ 'aria-label': 'controlled' }}
+              sx={{fontSize:'.8rem', textTransform:'none'}}
+            >
+              {isLightTheme ? <FaMoon size='1.1rem' /> : <TiWeatherSunny size='1.1rem' />}
+              {isLightTheme ? 'Dark Mode' : 'Light Mode'}
+            </Button>
+          </Box>
+          {['Projects', 'Contact'].map((section, index) => (
+
             <Link
               className={fadeClass}
               underline='none'
               key={index}
               href={`/#${section.toLowerCase()}`}
-              style={{ transitionDelay: `${(index + 2) * 100}ms` }}
+              style={{ transitionDelay: `${(index + 3) * 100}ms` }}
               sx={[
                 { color: 'text.primary', fontWeight: '600' },
-                (theme) => ({ '&:hover': { color: 'primary.main'} }),
+                (theme) => ({ '&:hover': { color: 'primary.main' } }),
               ]}
               onClick={() => setNavOpen(false)}
             >
@@ -99,27 +106,20 @@ const Header = ({ isLight, setTheme }) => {
             </Link>
           ))}
           {/* THEME SWITCHER HERE ============ */}
-          <Box className={fadeClass} style={{ transitionDelay: `500ms` }}>
-            <Switch
-              checked={isLight}
-              onChange={() => setTheme((state) => !state)}
-              inputProps={{ 'aria-label': 'controlled' }}
-            />
-          </Box>
+
         </Box>
 
-        {/* MENU BUTTON HERE  */}
+        {/* MENU BUTTON HERE | Visible on mobile only  */}
         <Box
           className={fadeClass}
           style={{ transitionDelay: `200ms` }}
-          sx={{ zIndex: '15', display: 'flex', alignItems: 'center', pr: 3 }}
+          sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', pr: 3 }}
         >
           <Button
             sx={{
               cursor: 'pointer',
               alignItems: 'center',
               minWidth: '0',
-              display: { xs: 'flex', md: 'none' },
             }}
             onClick={() => setNavOpen((x) => !x)}
           >
@@ -130,7 +130,7 @@ const Header = ({ isLight, setTheme }) => {
             )}
           </Button>
         </Box>
-        {/* BLUR BG HERE */}
+        {/* BLUR BG HERE | Visible on mobile only */}
         <Box
           className='blurbg'
           onClick={() => setNavOpen(false)}
@@ -139,12 +139,10 @@ const Header = ({ isLight, setTheme }) => {
               pointerEvents: `${navOpen ? 'all' : 'none'}`,
               transition: 'all 500ms ease-in-out',
               width: '100%',
-              bottom: '0',
-              top: '0',
+              height: '100%',
               position: 'fixed',
-              zIndex: '5',
+              zIndex: '-1',
               backdropFilter: `${navOpen ? 'blur(3px)' : 'blur(0px)'}`,
-              // bgcolor:'red'
             },
 
           ]}
