@@ -10,11 +10,8 @@ import Link from 'next/link'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#eeeee',
-  // ...theme.typography.body2,
   fontSize: '.85rem',
   textAlign: 'center',
-  // color: 'red',
-  // padding: '6px'
 }))
 const Projects = ({ projects }) => {
   return (
@@ -22,13 +19,10 @@ const Projects = ({ projects }) => {
       {/* HIGHLIGHT PROJECT HEADER START HERE */}
       <Fade>
         <Box display='flex' sx={{ mb: 3, alignItems: 'flex-end' }}>
-          <Typography variant='h5' sx={{}}>
+          <Typography variant='h5' sx={{mr:1}}>
             Project Highlights
           </Typography>
-          <Link href='/projects'>
-            <Button variant='text' size='small' sx={{ ml: 1, py: 0 }}>View All</Button>
-
-          </Link>
+            <Button href='/projects' variant='text' size='medium'>View All</Button>
         </Box>
       </Fade>
       {/* HIGHLIGHT PROJECTS START HERE */}

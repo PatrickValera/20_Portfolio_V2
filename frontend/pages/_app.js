@@ -24,7 +24,9 @@ function MyApp({ Component, pageProps }) {
     items.forEach(item => {
       observer.observe(item)
     })
+    console.log('MOUNTED')
     return (() => {
+      console.log('UNMOUNTING')
       items.forEach(item => {
         item.classList.toggle('show')
       })

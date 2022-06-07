@@ -81,10 +81,9 @@ const Header = ({ isLightTheme, setTheme }) => {
               size='small'
               variant='contained'
               onClick={() => setTheme((state) => !state)}
-              inputProps={{ 'aria-label': 'controlled' }}
               sx={{fontSize:'.8rem', textTransform:'none'}}
             >
-              {isLightTheme ? <FaMoon size='1.1rem' /> : <TiWeatherSunny size='1.1rem' />}
+              {isLightTheme ? <FaMoon size='.9rem' style={{marginRight:'.3rem'}} /> : <TiWeatherSunny size='1.1rem' />}
               {isLightTheme ? 'Dark Mode' : 'Light Mode'}
             </Button>
           </Box>

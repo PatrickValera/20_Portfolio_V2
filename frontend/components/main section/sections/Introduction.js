@@ -87,12 +87,13 @@ const Introduction = () => {
         }}
       >
         <Typography
-          variant='h3'
+          variant='h1'
           fontSize='2rem'
-          color='primary.light'
-          fontWeight='600'  
+          color='text.primary'
           sx={{
-            fontSize: { xs: '1.2rem', sm: '1.8rem', md: '2rem'},
+            my:1,
+            lineHeight:'1',
+            fontSize: { xs: '1rem', sm: '1.5rem'},
           }}
         >
           Hey there,
@@ -102,19 +103,29 @@ const Introduction = () => {
           color='primary.main'
           fontWeight='600'
           sx={{
-            fontSize: { xs: '2rem', sm: '2.7rem', md: '3.7rem', lg: '5rem' },
+            lineHeight:'1',
+            fontSize: { xs: '2rem', sm: '2.7rem', md: '3.7rem', lg: '4.5rem' },
           }}
         >
           {`I'm Patrick`}
         </Typography>
         <Typography
+        variant='h1'
+        color='text.primary'
+        sx={{
+          my:1,
+          fontSize: { xs: '1rem', sm: '1.5rem', md: '1.7rem' },
+          }}>
+          {`Software & Fullstack Engineer`}
+        </Typography>
+        {/* <Typography
           variant='body1'
           fontSize='.75rem'
           color='text.primary'
           gutterBottom
         >
-          {`I am a Computer Science student and a web developer. I aim to deepen my understanding of various technologies and build exceptional products.`}
-        </Typography>
+          {`I aim to deepen my understanding of various technologies and build exceptional products.`}
+        </Typography> */}
         <Button
           href='/#projects'
           variant='contained'
@@ -126,7 +137,6 @@ const Introduction = () => {
         <Button
           href='/ResumePatrickValera.pdf'
           variant='outlined'
-          endIcon={<BiRightArrowAlt />}
           size='small'
         >
           Resume
@@ -141,7 +151,7 @@ const Introduction = () => {
         }}
       >
         {cards.map(card => (
-          <Card card={card} />
+          <Card key={card.name} card={card} />
         ))}
       </Box>
     </Box>
@@ -149,7 +159,7 @@ const Introduction = () => {
 }
 const Card = ({ card }) => (
 
-  <Paper elevation='0' sx={{ display: 'flex', flex: '1 1 21%', m: '1%', aspectRatio: '1/1', justifyContent: 'center', alignItems: 'center', }}>
+  <Paper elevation={0} sx={{ display: 'flex', flex: '1 1 21%', m: '1%', aspectRatio: '1/1', justifyContent: 'center', alignItems: 'center', }}>
     <Box sx={{ textAlign: 'center' }} >
       {card.logo}
       <Typography variant='body1'>{card.name}</Typography>
