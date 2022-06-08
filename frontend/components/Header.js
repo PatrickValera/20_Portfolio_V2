@@ -76,19 +76,19 @@ const Header = ({ isLightTheme, setTheme }) => {
             right: { xs: `${navOpen ? '0' : '-70vw'}`, md: 'unset' },
           }}
         >
+          {/* THEME SWITCHER HERE ============ */}
           <Box className={fadeClass} style={{ transitionDelay: `200ms` }}>
             <Button
               size='small'
               variant='contained'
               onClick={() => setTheme((state) => !state)}
-              sx={{fontSize:'.8rem', textTransform:'none'}}
+              sx={{ fontSize: '.8rem', textTransform: 'none' }}
             >
-              {isLightTheme ? <FaMoon size='.9rem' style={{marginRight:'.3rem'}} /> : <TiWeatherSunny size='1.1rem' />}
+              {isLightTheme ? <FaMoon size='.9rem' style={{ marginRight: '.3rem' }} /> : <TiWeatherSunny size='1.1rem' />}
               {isLightTheme ? 'Dark Mode' : 'Light Mode'}
             </Button>
           </Box>
           {['Projects', 'Contact'].map((section, index) => (
-
             <Link
               className={fadeClass}
               underline='none'
@@ -104,15 +104,12 @@ const Header = ({ isLightTheme, setTheme }) => {
               <Typography variant='body1'>{section}</Typography>
             </Link>
           ))}
-          {/* THEME SWITCHER HERE ============ */}
-
         </Box>
-
         {/* MENU BUTTON HERE | Visible on mobile only  */}
         <Box
           className={fadeClass}
           style={{ transitionDelay: `200ms` }}
-          sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', pr: 3 }}
+          sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center' }}
         >
           <Button
             sx={{
@@ -149,7 +146,6 @@ const Header = ({ isLightTheme, setTheme }) => {
 
         </Box>
       </Box>
-
     </>
   )
 }

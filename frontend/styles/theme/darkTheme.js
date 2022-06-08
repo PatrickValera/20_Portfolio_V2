@@ -2,7 +2,10 @@ import { createTheme } from '@mui/material/styles';
 
 let darkTheme = createTheme({
   palette: {
-    mode: 'dark'
+    mode: 'dark',
+    text:{
+      primary:'red'
+    }
   }
 })
 darkTheme = createTheme({
@@ -19,13 +22,17 @@ darkTheme = createTheme({
     mode: 'dark',
     primary: {
       dark: 'rgb(255, 167, 38)',
-      main: 'rgba(130,190,255,.95)'
+      main: 'rgba(130,190,255,.95)',
+      contrastText:'rgba(50,50,20,1)'
     },
     background: {
       header: '#121212',
       nav: '#232323',
       paper: '#1d1d1f',
       paperContrast: '#eee',
+    },
+    text:{
+      primary:'#dedede'
     }
   },
   typography: {

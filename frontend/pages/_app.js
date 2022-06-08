@@ -33,10 +33,12 @@ function MyApp({ Component, pageProps }) {
     })
   }, [isLightTheme])
   return (
+    <>
     <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
       <CssBaseline />
       <Component {...pageProps} isLightTheme={isLightTheme} setTheme={setLightTheme} />
     </ThemeProvider>
+    </>
   )
 }
 
