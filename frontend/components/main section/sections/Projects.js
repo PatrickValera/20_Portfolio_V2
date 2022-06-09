@@ -19,10 +19,10 @@ const Projects = ({ projects }) => {
       {/* HIGHLIGHT PROJECT HEADER START HERE */}
       <Fade>
         <Box display='flex' sx={{ mb: 3, alignItems: 'flex-end' }}>
-          <Typography variant='h5' sx={{mr:1}}>
+          <Typography variant='h5' sx={{ mr: 1 }}>
             Project Highlights
           </Typography>
-            <Button href='/projects' variant='text' size='medium'>View All</Button>
+          <Button href='/projects' variant='text' size='medium'>View All</Button>
         </Box>
       </Fade>
       {/* HIGHLIGHT PROJECTS START HERE */}
@@ -42,12 +42,12 @@ const Projects = ({ projects }) => {
           {/* HIGHLIGHT PROJECT IMAGE HERE */}
           <Box sx={{ gridArea: { xs: '1/1/-1/13', md: `${index % 2 == 0 ? '1/1/-1/8' : '1/6/-1/-1'}`, } }}>
             <Box
-            className='proj-image-container'
+              className='proj-image-container'
               sx={{
-                position:'relative',
+                display: 'flex',
+                position: 'relative',
                 height: '100%',
                 border: { xs: 'unset', md: '3px solid #232323' },
-                display: 'flex',
                 alignItems: 'stretch',
                 filter: { xs: 'blur(1px)', md: 'unset' },
               }}
@@ -72,13 +72,13 @@ const Projects = ({ projects }) => {
               textAlign: { xs: 'left', md: `${index % 2 == 0 ? 'right' : 'left'}` },
               alignItems: { xs: 'center', md: `${index % 2 == 0 ? 'flex-end' : 'flex-start'}` },
               justifyContent: 'center',
-              // bgcolor: { xs: 'rgba(255,255,255,.8)', md: 'unset' },
+              bgcolor: { xs: 'rgba(100,110,120,.77)', md: 'unset' },
               zIndex: 5
             }}
           >
             <Typography
-              variant='h6'
-              sx={{ color: { xs: '#111', md: 'text.primary' } }}
+              variant='h5'
+              sx={{ color: { xs: 'white', md: 'text.primary' } }}
             >
               {project.title}
             </Typography>
@@ -228,15 +228,15 @@ const Projects = ({ projects }) => {
                 <Typography variant='body1' sx={{ flexGrow: '1', mt: 2, mb: 2 }}>
                   {project.description}
                 </Typography>
-                <Button variant='outlined' color='primary' href={project.link} sx={[{ pointerEvents: 'all', gap: 1 }, {'&:hover':{bgcolor:'primary.main',color:'primary.contrastText'}}]}>
-                Live<FiExternalLink />
-              </Button>
-              {/* <Icon site={'github'} sx={{ alignSelf: 'flex-end' }} />======================= */}
-            </Box>
+                <Button variant='outlined' color='primary' href={project.link} sx={[{ pointerEvents: 'all', gap: 1 }, { '&:hover': { bgcolor: 'primary.main', color: 'primary.contrastText' } }]}>
+                  Live<FiExternalLink />
+                </Button>
+                {/* <Icon site={'github'} sx={{ alignSelf: 'flex-end' }} />======================= */}
+              </Box>
             </Fade>
-      )
+          )
         })}
-    </Box>
+      </Box>
     </Box >
   )
 }

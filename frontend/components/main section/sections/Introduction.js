@@ -72,18 +72,19 @@ const Introduction = () => {
       className={fadeClass}
       style={{ transitionDelay: `900ms` }}
       sx={{
+        flexDirection:'column',
         height: '100vh',
-        flexWrap: 'wrap',
-        alignContent: 'center',
         justifyContent: 'center',
       }}
     >
       <Box
         display='flex'
         sx={{
+          flex:'1 1 auto',
           width: '100%',
           flexWrap: { xs: 'wrap', md: 'nowrap' },
           alignItems: 'center',
+          alignContent:'center',
           justifyContent: 'center',
         }}
       >
@@ -168,7 +169,7 @@ const Introduction = () => {
 
       <Box
         textAlign='center'
-        sx={{ flex: '1 1 100%' }}>
+        sx={{ flex:'0 1 18vh' }}>
         <Button href='#projects' variant='text' sx={{ fontSize: '5rem' }}><FiChevronsDown /></Button>
       </Box>
     </Box>

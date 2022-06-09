@@ -3,12 +3,12 @@ import React, { useState } from 'react'
 import Profile from '../public/patrick.json'
 import { IKContext, IKImage } from 'imagekitio-react'
 const Projects = () => {
-    const [focusedProj, setFocusedProj] = useState({})
     const { projects } = Profile
+    const [focusedProj, setFocusedProj] = useState(projects[0])
     return (
-        <Container component='main' maxWidth='xl' sx={{ p: { xs: 2, sm: 3, md: '65px' } }}>
-            <Typography variant='h3'>PROJECTS</Typography>
-            <Box display='flex' sx={{ gap: 2, alignItems: 'flex-start',justifyContent:'center', flexWrap: 'wrap' }}>
+        <Container component='main' maxWidth='xl' sx={{ py: { xs: 2, sm: 3, md: '65px' } }}>
+            <Typography variant='h4'>PROJECTS</Typography>
+            <Box display='flex' sx={{ gap: 2, alignItems: 'flex-start', justifyContent: 'center', flexWrap: 'wrap' }}>
 
                 <TableContainer component={Paper} sx={{ flex: '400px 1 1', order: { xs: 1, md: 0 } }}>
                     <Table>
@@ -33,7 +33,10 @@ const Projects = () => {
 
                     </Table>
                 </TableContainer>
-                <Paper sx={{ flex: '300px 0 1', p: 2, order: { xs: 0, md:1  } }}>
+                <Paper sx={{ flex: { xs: '1 1 auto', md: '0 1 300px' }, p: 2, order: { xs: 0, md: 1 } }}>
+                    {focusedProj.title}-
+                    {focusedProj.date}
+
                     <Box
                         sx={{
                             height: '100%',
@@ -52,11 +55,9 @@ const Projects = () => {
                             />}
                         </IKContext>
                     </Box>
-                    {focusedProj.title}-
-                    {focusedProj.date}
 
-                    <Button variant='contained' sx={{ mb: 1 }} href={focusedProj.link} fullWidth>LIVE</Button>
-                    <Button variant='outlined' fullWidth>SOURCE</Button>
+                    <Button size='small' variant='contained' sx={{ mb: 1 }} href={focusedProj.link} fullWidth>LIVE</Button>
+                    <Button size='small' variant='outlined' fullWidth>SOURCE</Button>
                 </Paper>
             </Box>
 
