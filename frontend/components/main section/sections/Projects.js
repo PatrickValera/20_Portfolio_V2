@@ -42,7 +42,7 @@ const Projects = ({ projects }) => {
           {/* HIGHLIGHT PROJECT IMAGE HERE */}
           <Box sx={{ gridArea: { xs: '1/1/-1/13', md: `${index % 2 == 0 ? '1/1/-1/8' : '1/6/-1/-1'}`, } }}>
             <Box
-              className='proj-image-container'
+              className=''
               sx={{
                 display: 'flex',
                 position: 'relative',
