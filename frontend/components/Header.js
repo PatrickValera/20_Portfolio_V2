@@ -1,6 +1,6 @@
 import { Box, Button, Link, Switch, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import { FaBars, FaMoon } from 'react-icons/fa'
+import { FaBars, FaMoon, FaSun } from 'react-icons/fa'
 import { AiOutlineClose } from 'react-icons/ai'
 import { TiWeatherSunny } from 'react-icons/ti'
 const Header = ({ isLightTheme, setTheme }) => {
@@ -76,18 +76,6 @@ const Header = ({ isLightTheme, setTheme }) => {
             right: { xs: `${navOpen ? '0' : '-70vw'}`, md: 'unset' },
           }}
         >
-          {/* THEME SWITCHER HERE ============ */}
-          <Box className={fadeClass} style={{ transitionDelay: `200ms` }}>
-            <Button
-              size='small'
-              variant='contained'
-              onClick={() => setTheme((state) => !state)}
-              sx={{ fontSize: '.8rem', textTransform: 'none' }}
-            >
-              {isLightTheme ? <FaMoon size='.9rem' style={{ marginRight: '.3rem' }} /> : <TiWeatherSunny size='1.1rem' />}
-              {isLightTheme ? 'Dark Mode' : 'Light Mode'}
-            </Button>
-          </Box>
           {['Projects', 'Contact'].map((section, index) => (
             <Link
               className={fadeClass}
@@ -104,6 +92,22 @@ const Header = ({ isLightTheme, setTheme }) => {
               <Typography variant='body1'>{section}</Typography>
             </Link>
           ))}
+          {/* THEME SWITCHER HERE ============ */}
+          <Box className={fadeClass} style={{ transitionDelay: `200ms` }}>
+            <Button
+              size='small'
+              variant='contained'
+              color='warning'
+              onClick={() => setTheme((state) => !state)}
+              sx={{ fontSize: '.8rem', minWidth: 'unset', p: '.3rem',width:'1.8rem',height:'1.8rem' }}
+            >
+              {isLightTheme ? (
+                <FaMoon color='#fcf3c5' size='1rem' />
+              ) : (
+                <FaSun color='#fcf3c5' size='1.2rem' />
+              )}
+            </Button>
+          </Box>
         </Box>
         {/* MENU BUTTON HERE | Visible on mobile only  */}
         <Box
@@ -140,11 +144,8 @@ const Header = ({ isLightTheme, setTheme }) => {
               zIndex: '-1',
               backdropFilter: `${navOpen ? 'blur(3px)' : 'blur(0px)'}`,
             },
-
           ]}
-        >
-
-        </Box>
+        ></Box>
       </Box>
     </>
   )

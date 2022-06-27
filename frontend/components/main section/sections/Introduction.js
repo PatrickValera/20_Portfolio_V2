@@ -77,14 +77,15 @@ const Introduction = () => {
         justifyContent: 'center',
       }}
     >
+      {/* SUMMARY AND CARDS HERE ===== */}
       <Box
         display='flex'
         sx={{
           flex:'1 1 auto',
           width: '100%',
           flexWrap: { xs: 'wrap', md: 'nowrap' },
-          alignItems: 'center',
           alignContent:'center',
+          alignItems:'center',
           justifyContent: 'center',
         }}
       >
@@ -92,19 +93,18 @@ const Introduction = () => {
         <Box
           className='fade'
           sx={{
-            flex: '0 2 600px',
+            flex: '0 2 450px',
             textAlign: { xs: 'center', md: 'left' },
             mb: 4
           }}
         >
           <Typography
             variant='h1'
-            fontSize='2rem'
             color='text.primary'
             sx={{
               my: 1,
               lineHeight: '1',
-              fontSize: { xs: '1rem', sm: '1.5rem' },
+              fontSize: { xs: '1.2rem', sm: '1.5rem' },
             }}
           >
             Hey there,
@@ -115,7 +115,7 @@ const Introduction = () => {
             fontWeight='600'
             sx={{
               lineHeight: '1',
-              fontSize: { xs: '2rem', sm: '2.7rem', md: '3.7rem', lg: '4.5rem' },
+              fontSize: { xs: '2.2rem', sm: '2.7rem', md: '3.7rem', lg: '4.5rem' },
             }}
           >
             {`I'm Patrick`}
@@ -125,18 +125,10 @@ const Introduction = () => {
             color='text.primary'
             sx={{
               my: 1,
-              fontSize: { xs: '1rem', sm: '1.5rem', md: '1.7rem' },
+              fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.7rem' },
             }}>
-            {`Software & Fullstack Engineer`}
+            {`Fullstack Software Engineer`}
           </Typography>
-          {/* <Typography
-          variant='body1'
-          fontSize='.75rem'
-          color='text.primary'
-          gutterBottom
-        >
-          {`I aim to deepen my understanding of various technologies and build exceptional products.`}
-        </Typography> */}
           <Button
             href='/#projects'
             variant='contained'
@@ -149,15 +141,17 @@ const Introduction = () => {
             href='/ResumePatrickValera.pdf'
             variant='outlined'
             size='small'
+            sx={{ textTransform: 'none' }}
+
           >
             Resume
           </Button>
         </Box>
-        {/* CARD HERE ===================== */}
+        {/* CARDS HERE ===================== */}
         <Box
           display='flex'
           sx={{
-            flex: '0 1 500px',
+            flex: '0 1 450px',
             flexWrap: 'wrap',
           }}
         >
@@ -166,10 +160,10 @@ const Introduction = () => {
           ))}
         </Box>
       </Box>
-
+      {/* BUTTON HERE ======= */}
       <Box
         textAlign='center'
-        sx={{ flex:'0 1 18vh' }}>
+        sx={{ flex:'0 1 20vh' }}>
         <Button href='#projects' variant='text' sx={{ fontSize: '5rem' }}><FiChevronsDown /></Button>
       </Box>
     </Box>

@@ -40,7 +40,7 @@ const Projects = ({ projects }) => {
           }}
         >
           {/* HIGHLIGHT PROJECT IMAGE HERE */}
-          <Box sx={{ gridArea: { xs: '1/1/-1/13', md: `${index % 2 == 0 ? '1/1/-1/8' : '1/6/-1/-1'}`, } }}>
+          <Box sx={{ gridArea: { xs: '1/1/-1/13', md: `${index % 2 == 0 ? '1/1/-1/8' : '1/6/-1/-1'}`, },opacity:'.9' }}>
             <Box
               className=''
               sx={{
@@ -125,7 +125,7 @@ const Projects = ({ projects }) => {
                 )
               })}
             </Stack>
-            <Button variant='contained' color='primary' href={project.link} sx={{ pointerEvents: 'all', gap: 1 }}>
+            <Button size='small' variant='contained' color='primary' href={project.link} sx={{ pointerEvents: 'all', gap: 1 }}>
               Live<FiExternalLink />
             </Button>
 
@@ -136,7 +136,7 @@ const Projects = ({ projects }) => {
 
       {/* OTHER PROJECT HEADER START HERE */}
       <Fade sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
-        <Typography variant='h5' sx={{ mt: '10vh', mb: 1 }}>
+        <Typography variant='h4' sx={{ mt: '10vh', mb: 1 }}>
           Other Projects
         </Typography>
         <Button variant='text' size='small' href='/projects' sx={{ ml: 1, mb: 2, py: 0, textDecoration: 'underline' }}>View All</Button>
