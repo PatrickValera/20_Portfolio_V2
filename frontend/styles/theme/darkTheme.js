@@ -1,13 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
-let darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    text:{
-      primary:'red'
-    }
-  }
-})
+let darkTheme = createTheme()
+
 darkTheme = createTheme({
   components: {
     MuiCssBaseline: {
@@ -15,6 +9,12 @@ darkTheme = createTheme({
         body: {
           backgroundColor: '#121212'
         }
+      }
+    },
+    MuiButton:{
+      defaultProps:{
+        disableElevation:true,
+        disableRipple:true
       }
     }
   },
@@ -28,7 +28,7 @@ darkTheme = createTheme({
     background: {
       header: '#121212',
       nav: '#232323',
-      paper: '#1d1d1f',
+      paper: '#222',
       paperContrast: '#eee',
     },
     text:{
@@ -70,14 +70,16 @@ darkTheme = createTheme({
       },
     },
   },
-  components:{
-    MuiButton:{
-      defaultProps:{
-        disableElevation:true,
-        disableRipple:true
-      }
+  breakpoints:{
+    values:{
+      xs:0,
+      sm:600,
+      md:900,
+      lg:1200,
+      xl:1550,
     }
   }
+
 });
 
 export default darkTheme;

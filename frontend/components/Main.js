@@ -8,7 +8,7 @@ import { SocialsNav } from '../components/main section/sections/SocialsNav'
 
 const Main = ({ profile: { projects, socials } }) => {
     return (
-        <Container component='main' maxWidth='xl' sx={{ px: { xs: 1, sm: 3, md: '65px' } }}>
+        <Container component='main' maxWidth='lg' sx={{ px:0 }}>
             <Introduction />
             <About />
             <Projects projects={projects} />

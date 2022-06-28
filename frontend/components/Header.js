@@ -82,7 +82,7 @@ const Header = ({ isLightTheme, setTheme }) => {
               underline='none'
               key={index}
               href={`/#${section.toLowerCase()}`}
-              style={{ transitionDelay: `${(index + 3) * 100}ms` }}
+              style={{ transitionDelay: `${(index + 2) * 100}ms` }}
               sx={[
                 { color: 'text.primary', fontWeight: '600' },
                 (theme) => ({ '&:hover': { color: 'primary.main' } }),
@@ -93,7 +93,7 @@ const Header = ({ isLightTheme, setTheme }) => {
             </Link>
           ))}
           {/* THEME SWITCHER HERE ============ */}
-          <Box className={fadeClass} style={{ transitionDelay: `200ms` }}>
+          <Box className={fadeClass} style={{ transitionDelay: `400ms` }}>
             <Button
               size='small'
               variant='contained'
@@ -140,6 +140,7 @@ const Header = ({ isLightTheme, setTheme }) => {
               transition: 'all 500ms ease-in-out',
               width: '100%',
               height: '100%',
+              left:0,
               position: 'fixed',
               zIndex: '-1',
               backdropFilter: `${navOpen ? 'blur(3px)' : 'blur(0px)'}`,

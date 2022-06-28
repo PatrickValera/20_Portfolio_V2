@@ -6,7 +6,6 @@ import { styled } from '@mui/material/styles'
 import { IKImage, IKContext } from 'imagekitio-react'
 import { FiExternalLink } from 'react-icons/fi'
 import { AiOutlineFolder, AiTwotoneFolderOpen } from 'react-icons/ai'
-import Link from 'next/link'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#eeeee',
@@ -34,22 +33,19 @@ const Projects = ({ projects }) => {
             gridTemplateColumns: 'repeat(12,1fr)',
             position: 'relative',
             mb: 4,
-            border: { xs: '1px solid black', md: 'unset' },
-            // pointerEvents:'none',
             zIndex: 4
           }}
         >
           {/* HIGHLIGHT PROJECT IMAGE HERE */}
-          <Box sx={{ gridArea: { xs: '1/1/-1/13', md: `${index % 2 == 0 ? '1/1/-1/8' : '1/6/-1/-1'}`, },opacity:'.9' }}>
+          <Box sx={{ gridArea: { xs: '1/1/2/13', md: `${index % 2 == 0 ? '1/1/-1/8' : '1/6/-1/-1'}`, }, opacity: '.9' }}>
             <Box
-              className=''
               sx={{
                 display: 'flex',
                 position: 'relative',
                 height: '100%',
-                border: { xs: 'unset', md: '3px solid #232323' },
+                border: ' solid #232323',
+                borderWidth: { xs: '1px 0', md: '1px' },
                 alignItems: 'stretch',
-                filter: { xs: 'blur(1px)', md: 'unset' },
               }}
             >
               <IKContext urlEndpoint='https://ik.imagekit.io/oqrgl5cil3a'>
@@ -64,72 +60,72 @@ const Projects = ({ projects }) => {
           {/* HIGHLIGHT PROJECT DESCRIPTION HERE */}
           <Box
             sx={{
-              p: 2,
-              gridArea: { xs: '1/1/-1/13', md: `${index % 2 == 0 ? '1/6/-1/-1' : '1/1/-1/8'}` },
+              p: 1,
+              gridArea: { xs: '2/1/3/13', md: `${index % 2 == 0 ? '1/7/-1/13' : '1/1/-1/7'}` },
               display: 'flex',
               flexDirection: 'column',
               pointerEvents: 'none',
               textAlign: { xs: 'left', md: `${index % 2 == 0 ? 'right' : 'left'}` },
-              alignItems: { xs: 'center', md: `${index % 2 == 0 ? 'flex-end' : 'flex-start'}` },
+              alignItems: { xs: 'flex-start', md: `${index % 2 == 0 ? 'flex-end' : 'flex-start'}` },
               justifyContent: 'center',
-              bgcolor: { xs: 'rgba(100,110,120,.77)', md: 'unset' },
-              zIndex: 5
+              position: 'relative'
             }}
           >
             <Typography
               variant='h5'
-              sx={{ color: { xs: 'white', md: 'text.primary' } }}
+              fontWeight='500'
+              sx={{ order: 1, color: 'text.primary', mb: 1 }}
             >
+              <Typography component='span' color='primary.main' fontSize='.85rem' fontWeight='600' sx={{ mr: '5px' }}>0{index + 1}</Typography>
               {project.title}
             </Typography>
-            <Typography
-              variant='body1'
+            <Paper
+              elevation='3'
               sx={{
-                bgcolor: 'background.paper',
-                color: 'background.paperContrast',
+                order: 2,
                 p: { xs: 1, md: 3 },
-                mb: 1,
-                border: '2px solid',
+                mb: 2,
+                maxWidth: { xs: '370px', md: '700px' },
                 pointerEvents: 'all',
-                borderColor: 'background.paperContrast',
-                maxWidth: { xs: '350px', md: '700px' },
               }}
             >
-              {project.description}
-            </Typography>
+              <Typography
+                variant='body1'
+              >
+                {project.description}
+              </Typography>
+            </Paper>
             <Stack
               direction='row'
               spacing={{ xs: 1, md: 2 }}
               sx={{
-                flexWrap: 'wrap',
-                color: 'blue',
-                justifyContent: 'center',
+                order: 3,
+                justifyContent: 'left',
                 mb: 1,
               }}
             >
-              {project.stack.map((tool, index) => {
-                return (
-                  <Box key={index} sx={{ color: 'red' }}>
-                    <Item
-                      elevation={0}
-                      sx={{
-                        fontSize: '.68rem',
-                        mb: '.35rem',
-                        inlineSize: 'max-content',
-                        px: 1,
-                      }}
-                    >
-                      {tool}
-                    </Item>
-                  </Box>
-                )
-              })}
+              {project.stack.map((tool, index) => (
+                <Box key={index} sx={{ color: 'red' }}>
+                  <Item
+                    elevation={0}
+                    sx={{
+                      fontSize: '.67rem',
+                      mb: '.35rem',
+                      inlineSize: 'max-content',
+                      p: '.25rem',
+                    }}
+                  >
+                    {tool}
+                  </Item>
+                </Box>)
+              )
+              }
+              <Button size='large' variant='text' color='primary' href={project.link} sx={{ pointerEvents: 'all', minWidth: 'unset' }}>
+                <FiExternalLink />
+              </Button>
             </Stack>
-            <Button size='small' variant='contained' color='primary' href={project.link} sx={{ pointerEvents: 'all', gap: 1 }}>
-              Live<FiExternalLink />
-            </Button>
 
-            {/* <Icon site={'github'} ===============================/> */}
+
           </Box>
         </Fade>
       ))}

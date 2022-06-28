@@ -51,7 +51,7 @@ img {
 }
 .intro-fade-done{
   position: relative;
-  transition:opacity,transform .45s ease-out;
+  transition:all .45s ease-out;
   opacity: 1;
   transform: translateY(0);
 }

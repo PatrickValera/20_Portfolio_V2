@@ -7,7 +7,7 @@ lightTheme = createTheme({
     background:{
       header:'#fff',
       nav:'rgb(120, 215, 255)',
-      paper:'#f5f5f5',
+      paper:'#eaeaea',
       paperContrast:'#131313'
     }
   },
@@ -53,6 +53,15 @@ lightTheme = createTheme({
         disableRipple:true,
         sx:{textTransform:'none'}
       }
+    }
+  },
+  breakpoints:{
+    values:{
+      xs:0,
+      sm:600,
+      md:900,
+      lg:1200,
+      xl:1550,
     }
   }
 })
